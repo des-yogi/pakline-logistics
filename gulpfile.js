@@ -15,6 +15,7 @@ const atImport = require("postcss-import");
 const csso = require('gulp-csso');
 const inlineSVG = require('postcss-inline-svg');
 const objectFitImages = require('postcss-object-fit-images');
+const purgecss = require('@fullhuman/postcss-purgecss');
 
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
@@ -64,6 +65,12 @@ let discardComments = [
   removeComments(),
 ]
 
+let purgeCss = [
+  purgecss({
+    content: ['./src/**/*.html']
+  })
+]
+
 // Очистка папки сборки
 gulp.task('clean', function () {
   console.log('---------- Очистка папки сборки');
@@ -94,6 +101,9 @@ gulp.task('style', function () {
     .pipe(debug({title: "Style:"}))
     .pipe(sass())
     .pipe(postcss(postCssPlugins))
+    .pipe(gulpIf(!isDev,
+      postcss(purgeCss)
+    ))
     .pipe(gulpIf(isDev,
       postcss(discardComments)
     ))

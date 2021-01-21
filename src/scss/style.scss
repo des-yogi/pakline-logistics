@@ -6,7 +6,7 @@
 
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
-@import './src/blocks/accordion/accordion.scss';
+@import '../../node_modules/swiper/swiper-bundle.min.css';
 @import './src/blocks/breadcrumbs/breadcrumbs.scss';
 @import './src/blocks/btn/btn.scss';
 @import './src/blocks/burger/burger.scss';
@@ -25,15 +25,15 @@
 @import './src/blocks/page-footer/page-footer.scss';
 @import './src/blocks/page-header/page-header.scss';
 @import './src/blocks/pagination/pagination.scss';
-@import './src/blocks/pie-chart/pie-chart.scss';
 @import './src/blocks/scroll-link/scroll-link.scss';
-@import './src/blocks/sprite-png/sprite-png.scss';
-@import './src/blocks/sprite-png/sprite-png__demo.scss';
 @import './src/blocks/sprite-svg/sprite-svg.scss';
 @import './src/blocks/table/table.scss';
 @import './src/blocks/table-mobile-scroll/table-mobile-scroll.scss';
 @import './src/blocks/table-responsive/table-responsive.scss';
-@import './src/blocks/tabs/tabs.scss';
-@import './src/blocks/to-top/to-top.scss';
+@import './src/blocks/tab/tab.scss';
 @import './src/blocks/typo/typo.scss';
+@import './src/blocks/cookie-popup/cookie-popup.scss';
+@import './src/blocks/hero/hero.scss';
+@import './src/blocks/mmenu/mmenu.scss';
+@import './src/blocks/mhead/mhead.scss';
 @import './src/scss/print.scss';

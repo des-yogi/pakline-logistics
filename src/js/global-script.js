@@ -20,24 +20,6 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 //   // code
 // }());
 
-// На проекте нет jQuery, но хочется $( document ).ready...
-// function ready(fn) {
-//   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-//     fn();
-//   } else {
-//     document.addEventListener('DOMContentLoaded', fn);
-//   }
-// }
-//
-// ready(function(){
-//   // code
-// });
-
-(function(){
-  // code
-
-}());
-
 // $(document).ready(function(){
 //   if(window.matchMedia('(min-width: 1366px)').matches){
 //   // do functionality on screens bigger than 1366px
@@ -47,3 +29,59 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 //   }
 //   return false;
 // });
+
+
+// (function(){
+
+//   window.addEventListener('scroll', stickyHandler);
+
+//   var navbar = document.getElementById("page-header");
+//   var sticky = navbar.offsetTop;
+//   var offset = 75;
+
+//   function stickyHandler() {
+//     if (window.pageYOffset > (sticky + 0.1) ) {
+//       navbar.classList.add("sticky");
+
+//       if (window.pageYOffset >= (sticky + offset) ) {
+//         navbar.classList.add("sticky--new-bg");
+//       }
+//     }
+//     else {
+//       navbar.classList.remove("sticky");
+//       navbar.classList.remove("sticky--new-bg");
+//     }
+//   }
+// }());
+
+(function(){
+  var bLazy = new Blazy({
+    selector: '.b-lazy'
+  });
+}());
+
+(function(){
+  var phoneElems = document.getElementsByClassName('phone-mask');
+  Array.prototype.forEach.call(phoneElems, function (item) {
+    var phoneMask = IMask(
+      item, {
+        mask: '+{38\\0} (00) 000 00 00',
+        lazy: false // make placeholder always visible
+    });
+  });
+}());
+
+(function () {
+  const submitBtn = document.querySelector('.btn-submit');
+  const agreementCheckbox = document.querySelector('#agreement');
+  const agreementHandler = function (e) {
+    if (!this.checked) {
+      submitBtn.disabled = true;
+    } else {
+      submitBtn.disabled = false;
+    }
+  };
+  if (agreementCheckbox) {
+    agreementCheckbox.addEventListener('change', agreementHandler);
+  }
+})();

@@ -1,19 +1,26 @@
 (function(){
 
   // Добавление/удаление модификаторов при клике на переключение видимости
-  var toggler = document.getElementById('main-nav-toggler');
-  if(toggler){
-    toggler.addEventListener('click', mainNavVisibleToggle);
-
-    function mainNavVisibleToggle(e) {
+  var toggler = document.getElementById('burger');
+  //var blocker = document.getElementsByClassName('mm-wrapper__blocker');
+  if (toggler) {
+    toggler.addEventListener('click', burgerToggle);
+    function burgerToggle(e) {
       e.preventDefault();
-      toggler.classList.toggle('burger--close'); // модификатор иконки (должен быть .burger)
-      document.getElementById('main-nav').classList.toggle('main-nav--open');
+      toggler.classList.toggle('burger--close');
+      // if ( toggler.classList.contains('burger--close') ) {
+      //   toggler.classList.remove('burger--close');
+      //   toggler.classList.add('burger--open');
+      // } else {
+      //   toggler.classList.remove('burger--open');
+      //   toggler.classList.add('burger--close');
+      // }
+       // модификатор иконки (должен быть .burger)
     }
   }
 
   // Добавление/удаление модификаторов при фокусировке на ссылочном элементе
-  var linkClassName = 'main-nav__link';
+/*  var linkClassName = 'main-nav__link';
   var linkClassNameShowChild = 'main-nav__item--show-child';
   var findLinkClassName = new RegExp(linkClassName);
   // Слежение за всплывшим событием focus (нужно добавить класс, показывающий потомков)
@@ -36,28 +43,28 @@
         item.classList.remove(linkClassNameShowChild);
       });
     }
-  }, true);
+  }, true);*/
 
 
 
   // Добавление метода .parents()
-  Element.prototype.parents = function(selector) {
-    var elements = [];
-    var elem = this;
-    var ishaveselector = selector !== undefined;
+  // Element.prototype.parents = function(selector) {
+  //   var elements = [];
+  //   var elem = this;
+  //   var ishaveselector = selector !== undefined;
 
-    while ((elem = elem.parentElement) !== null) {
-      if (elem.nodeType !== Node.ELEMENT_NODE) {
-        continue;
-      }
+  //   while ((elem = elem.parentElement) !== null) {
+  //     if (elem.nodeType !== Node.ELEMENT_NODE) {
+  //       continue;
+  //     }
 
-      if (!ishaveselector || elem.matches(selector)) {
-        elements.push(elem);
-      }
-    }
+  //     if (!ishaveselector || elem.matches(selector)) {
+  //       elements.push(elem);
+  //     }
+  //   }
 
-    return elements;
-  };
+  //   return elements;
+  // };
 
   // Добавление метода .closest() (полифил, собственно)
   // (function(e){

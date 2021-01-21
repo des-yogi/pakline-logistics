@@ -24,18 +24,27 @@
     "table-mobile-scroll": [],
     "table-responsive": [],
     "tab": [],
-    "typo": []
+    "typo": [],
+    "cookie-popup": [],
+    "hero": [],
+    "mmenu": [],
+    "mhead": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
-    "./src/scss/mixins.scss"
+    "./src/scss/mixins.scss",
+    "../../node_modules/swiper/swiper-bundle.min.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"
   ],
-  "singleCompiled": [
-  ],
+  "singleCompiled": [],
   "addJsBefore": [
+    "./node_modules/swiper/swiper-bundle.min.js",
+    "./node_modules/mmenu-js/dist/mmenu.polyfills.js",
+    "./node_modules/mmenu-js/dist/mmenu.js",
+    "./node_modules/mhead-js/dist/mhead.js",
+    "./node_modules/imask/dist/imask.min.js",
     "./node_modules/picturefill/dist/picturefill.min.js",
     "./node_modules/focus-visible/dist/focus-visible.min.js",
     "./node_modules/blazy/blazy.min.js",
@@ -45,7 +54,6 @@
     "./src/js/libs/popper.min.js",
     "./src/js/libs/util.js",
     "./src/js/libs/collapse.js"
-
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

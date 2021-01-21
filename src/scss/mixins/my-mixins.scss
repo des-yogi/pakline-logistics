@@ -51,3 +51,19 @@
     }
   }
 }
+
+@mixin btn-templ {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 4px 8px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+}
