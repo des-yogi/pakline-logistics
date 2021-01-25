@@ -33,6 +33,7 @@ $title-color:                 $text-color;
 $text-muted:                  #737f8b; //Breadcrubms, Disabled
 
 $body-bg:                     #f4f5f7;
+$disabled-bg:                 rgba(115, 127, 139, 0.25); //Disabled
 
 $link-color:                  $main-color;
 $link-color--hover:           $main-color;
@@ -52,7 +53,7 @@ $font-size--h4:               20px;
 $font-size--h5:               16px;
 $font-size--h6:               16px;
 
-$line-height:                 1.4;
+$line-height:                 1.45;
 
 //$typo-margin-vertical:        1em;
 
@@ -72,7 +73,7 @@ $screen-xxl:                  1800px;
 
 $container-sm:                100%;
 $container-md:                100%;
-$container-lg:                100%;
+$container-lg:                $screen-lg - 20;
 $container-xl:                $screen-xl - 20;
 $container-xxl:               $screen-xxl - 20;
 

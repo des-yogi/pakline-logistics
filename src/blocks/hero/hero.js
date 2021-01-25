@@ -4,13 +4,13 @@
     lazy: true,
     loop: true,
 
-    // pagination: {
-    //   el: '.swiper-pagination',
-    // },
+    pagination: {
+      el: '.hero__pagination',
+    },
 
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
+    navigation: {
+      nextEl: '.hero__next',
+      prevEl: '.hero__prev',
+    },
   })
 }());

@@ -1,8 +1,95 @@
-// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-footer {
+  position: relative;
+  min-height: 100px;
+  padding-top: 64px;
+  padding-bottom: 24px;
+  color: $white;
+  //background-color: $overlay-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/footer-bg.jpg);
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 32px;
+  }
 
   $block-name:                &; // #{$block-name}__element
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $overlay-color;
+    backdrop-filter: blur(64px);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__top {
+
+  }
+
+  &__top-left {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 9);
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      flex: 0 0;
+      margin-bottom: 16px;
+
+      @media (min-width: $screen-md) {
+        margin-right: 32px;
+        margin-bottom: 24px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 0;
+      }
+    }
+
+    span {
+      flex: 1 1;
+      flex-basis: auto;
+
+      @media (min-width: $screen-md) {
+        max-width: 400px;
+      }
+    }
+  }
+
+  &__top-right {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 3);
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__contacts {
+
+  }
+
+  &__contacts-col {
+    @include col(xs, 12, $grid-columns, 14px);
+  }
+
+  &__contacts-title {
+
+  }
+
+  &__copyrights {
+
+  }
 }

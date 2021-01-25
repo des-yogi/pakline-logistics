@@ -35,7 +35,38 @@
   }
 
   &--footer {
-    width: 145px;
-    height: 52px;
+    color: $white;
+
+    svg {
+      width: 141px;
+      height: 52px;
+
+      @media (min-width: $screen-md) {
+        width: 174px;
+        height: 64px;
+      }
+    }
+
+    #text-group {
+      fill: currentColor;
+    }
+
+    #icon {
+      stroke: currentColor;
+    }
+  }
+
+  &--group {
+    color: $white;
+
+    svg {
+      width: 106px;
+      height: 32px;
+
+      @media (min-width: $screen-xl) {
+        width: 173px;
+        height: 52px;
+      }
+    }
   }
 }

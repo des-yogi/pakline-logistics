@@ -1,61 +1,150 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/main-nav/main-nav.html')
+-->
 
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<nav id="main-nav" class="main-nav" role="navigation">
-  <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
-  <ul class="main-nav__list">
-    <li class="main-nav__item  main-nav__item--active">
-      <a href="" class="main-nav__link">
-        Страницы
-      </a>
-      <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-2">
-        <ul class="main-nav__list  main-nav__list--lvl-2">
-          <li class="main-nav__item  main-nav__item--lvl-2">
-            <a href="" class="main-nav__link  main-nav__link--lvl-2">
-              Контакты
-            </a>
+<nav id="main-nav" class="main-nav">
+<!--   <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button> -->
+  <div class="container">
+    <ul class="row  main-nav__list">
+      <li class="main-nav__item">
+        <a href="#" class="main-nav__link">PAKLINE Logistics</a>
+        <ul class="list-nostyled">
+          <li>
+            <a href="#">About us</a>
           </li>
-          <li class="main-nav__item  main-nav__item--lvl-2">
-            <a href="" class="main-nav__link  main-nav__link--lvl-2">
-              Услуги
-            </a>
-            <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
-              <ul class="main-nav__list  main-nav__list--lvl-3">
-                <li class="main-nav__item  main-nav__item--lvl-3">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                    Вёрстка HTML-CSS
-                  </a>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-3">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                    Стриптиз
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <li>
+            <a href="#">Company group PAKLINE</a>
+            <ul class="list-nostyled">
+              <li>
+                <a href="#">CORSA</a>
+              </li>
+              <li>
+                <a href="#">EXPRESS MOTO</a>
+              </li>
+              <li class="active">
+                <a href="#">KITEXPRESS</a>
+              </li>
+              <li>
+                <a href="#">KUB D24</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Career</a>
+          </li>
+          <li>
+            <a href="#">Contact us</a>
+          </li>
+          <li>
+            <a href="#">Clients</a>
           </li>
         </ul>
-      </div>
-    </li>
-    <li class="main-nav__item">
-      <a href="https://github.com/nicothin/NTH-start-project" class="main-nav__link">
-        Репозиторий
-      </a>
-    </li>
-    <li class="main-nav__item">
-      <a href="http://nicothin.pro/" class="main-nav__link">
-        Сайт автора
-      </a>
-    </li>
-  </ul>
-</nav>
+      </li>
+      <li class="main-nav__item">
+        <a href="#" class="main-nav__link">Logistics consulting</a>
+        <ul class="list-nostyled">
+          <li>
+            <a href="#">Solution for online stores</a>
+          </li>
+          <li>
+            <a href="#">Solution for FMCG</a>
+          </li>
+          <li>
+            <a href="#">Technological solutions</a>
+          </li>
+        </ul>
+      </li>
+      <li class="main-nav__item">
+        <a href="#" class="main-nav__link">Outsourcing of logistics services</a>
+        <ul class="list-nostyled">
+          <li>
+            <a href="#">Warehouse outsourcing</a>
+          </li>
+          <li>
+            <a href="#">Transport outsourcing</a>
+          </li>
+          <li>
+            <a href="#">Customer Support Center</a>
+          </li>
+          <li>
+            <a href="#">Transport outsourcing</a>
+          </li>
+          <li>
+            <a href="#">Customer Support Center</a>
+          </li>
+        </ul>
+      </li>
 
--->
+      <li class="main-nav__item">
+        <a href="#" class="main-nav__link">PAKLINE Logistics</a>
+        <ul class="list-nostyled">
+          <li>
+            <a href="#">About us</a>
+          </li>
+          <li>
+            <a href="#">Company group PAKLINE</a>
+            <ul class="list-nostyled">
+              <li>
+                <a href="#">CORSA</a>
+              </li>
+              <li>
+                <a href="#">EXPRESS MOTO</a>
+              </li>
+              <li>
+                <a href="#">KITEXPRESS</a>
+              </li>
+              <li>
+                <a href="#">KUB D24</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Career</a>
+          </li>
+          <li>
+            <a href="#">Contact us</a>
+          </li>
+          <li>
+            <a href="#">Clients</a>
+          </li>
+        </ul>
+      </li>
+      <li class="main-nav__item">
+        <a href="#" class="main-nav__link">Logistics consulting</a>
+        <ul class="list-nostyled">
+          <li>
+            <a href="#">Solution for online stores</a>
+          </li>
+          <li>
+            <a href="#">Solution for FMCG</a>
+          </li>
+          <li>
+            <a href="#">Technological solutions</a>
+          </li>
+        </ul>
+      </li>
+      <li class="main-nav__item">
+        <a href="#" class="main-nav__link">Outsourcing of logistics services</a>
+        <ul class="list-nostyled">
+          <li>
+            <a href="#">Warehouse outsourcing</a>
+          </li>
+          <li>
+            <a href="#">Transport outsourcing</a>
+          </li>
+          <li>
+            <a href="#">Customer Support Center</a>
+          </li>
+          <li>
+            <a href="#">Transport outsourcing</a>
+          </li>
+          <li>
+            <a href="#">Customer Support Center</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    </ul>
+  </div>
+</nav>

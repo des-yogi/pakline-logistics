@@ -1850,7 +1850,7 @@ input.mm-check:checked::before {
   min-height: 140px;
   max-height: 880px;
   width: 100%;
-  top: 79px; //50%
+  top: 0; //50%
   left: 0; //50%
   bottom: 0; //auto
   right: 0; //auto
@@ -2075,6 +2075,28 @@ body.modal-open .mm-slideout {
 
 .mm-wrapper__blocker {
   display: none !important;
+}
+
+.mm-close {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 14px;
+
+  img {
+    display: block;
+    margin: auto 0;
+  }
+
+  &__btn {
+    width: 64px;
+    height: 100%;
+    background-color: $main-color;
+    background-repeat: no-repeat;
+    background-size: 26px;
+    background-position: center;
+    background-image: svg-load('../blocks/mmenu/bg-img/close-icon.svg', fill=$white);
+  }
 }
 
 .mmenu {

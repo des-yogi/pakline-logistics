@@ -15,8 +15,9 @@
   <div id="page" class="page__inner">
 
     <div class="page__content">
-      <div class="page__header-wrapper">
+      <div class="page__header-wrapper  page__header-wrapper--"><!-- добавить модификатор для неглавной --no-index -->
         @@include('blocks/hero/hero.html')
+        @@include('blocks/main-nav/main-nav.html')
         @@include('blocks/page-header/page-header.html', {
             "pageType": "index"
         })

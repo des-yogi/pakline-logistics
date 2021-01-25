@@ -28,7 +28,9 @@
     "cookie-popup": [],
     "hero": [],
     "mmenu": [],
-    "mhead": []
+    "mhead": [],
+    "socials": [],
+    "copyrights": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -1,14 +1,22 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
-@ @include('blocks/btn/btn.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
+@ @include('blocks/btn/btn.html', {
+  "btnType": "link",
+  "btnSize": "btn--xl",
+  "btnText": "Про компанію",
+  "btnIcon": "true",
+  "svgId": "info-icon",
+  "svgWidth": "20",
+  "svgHeight": "20",
+})
 
 <a class="btn" href="">Cсылка</a>
 <input class="btn" type="submit" value="Input">
 <button class="btn">Button</button>
-
+<a href="#" class="btn  btn--xl">
+  <span class="btn__text">Про компанію</span>
+  <span class="btn__icon">
+    <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#info-icon"></use></svg>
+  </span>
+</a>
 -->
+

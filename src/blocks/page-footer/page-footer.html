@@ -1,11 +1,61 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-footer/page-footer.html')
-
 -->
 
 <footer class="page-footer" role="contentinfo">
-  page-footer
+  <div class="container">
+    <div class="row  page-footer__top">
+      <div class="page-footer__top-left">
+        <a href="index.html" class="logo logo--footer" title="Pakline Logistics">
+          <svg width="141" height="52" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pakline-logistics-logo"></use></svg>
+        </a>
+        <span>ТМ PAKLINE Logistics — Эксклюзивные складские и логистические услуги в комплексе с современным технологическим потенциалом для вашего бизнеса.</span>
+      </div>
+      <div class="page-footer__top-right">
+        <a href="#" class="logo  logo--group" title="Pakline Group">
+          <svg width="106" height="32" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pakline-group-logo"></use></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="row  page-footer__contacts">
+      <div class="page-footer__contacts-col">
+        <h5 class="page-footer__contacts-title">Соцсети</h5>
+        @@include('../../blocks/socials/socials.html')
+      </div>
+      <div class="page-footer__contacts-col">
+        <h5 class="page-footer__contacts-title">Адреса</h5>
+        <div>
+          <span>Украина</span>, <span>49000</span>, <br>
+          <span>г. Днипро</span>, <span>ул. Сечевых Стрельцов, 94</span>
+        </div>
+      </div>
+      <div class="page-footer__contacts-col">
+        <h5 class="page-footer__contacts-title">E-mail</h5>
+        <ul class="list-nostyled">
+          <li><a href="mailto:korsa@pakline.com.ua">korsa@pakline.com.ua</a></li>
+          <li><a href="mailto:info@pakline.com.ua">info@pakline.com.ua</a></li>
+        </ul>
+      </div>
+      <div class="page-footer__contacts-col">
+        <h5 class="page-footer__contacts-title">Телефон</h5>
+        <ul class="list-nostyled">
+          <li><a href="tel:+0800303006">0 (800) 303 006</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-footer__copyrights">
+      <div class="row  copyrights">
+        <div class="copyrights__owner">
+          <span>© 2020 Pakline logistics</span>
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Условия и Положения</a>
+        </div>
+        <div class="copyrights__dev">
+          <span>Developed by:</span>&ensp;<a href="https://itdoors.com.ua/" target="_blank" rel="nofollow noopener">IT Doors</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>

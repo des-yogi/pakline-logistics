@@ -12,11 +12,11 @@
     height: 96px;
   }
 
-  $block-name:                &; // #{$block-name}__element
+  // @media (min-width: $screen-xl) {
 
-  // &.mh-pinned {
-  //   background-color: green;
   // }
+
+  $block-name:                &; // #{$block-name}__element
 
   &__inner {
     position: relative;
@@ -48,15 +48,16 @@
     @include col(xl, 2);
 
     .logo {
-      margin-top: auto;
-      margin-bottom: 13px;
+      margin: auto 0;
+      // margin-top: auto;
+      // margin-bottom: 13px;
 
-      @media (min-width: $screen-md) {
-        margin-bottom: 19px;
-      }
+      // @media (min-width: $screen-md) {
+      //   margin-bottom: 19px;
+      // }
 
       @media (min-width: $screen-xl) {
-        margin-bottom: 0;
+        margin-bottom: 7px;
       }
     }
   }
