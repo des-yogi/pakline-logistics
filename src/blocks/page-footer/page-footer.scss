@@ -3,6 +3,7 @@
   min-height: 100px;
   padding-top: 64px;
   padding-bottom: 24px;
+  font-size: 14px;
   color: $white;
   //background-color: $overlay-color;
   background-repeat: no-repeat;
@@ -33,15 +34,32 @@
     z-index: 1;
   }
 
-  &__top {
+  a[href^="mailto"],
+  a[href^="tel"] {
+    color: $white;
+  }
 
+  &__top {
+    margin-bottom: 42px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 64px;
+    }
   }
 
   &__top-left {
     @include col(xs, 12, $grid-columns, 14px);
-    @include col(md, 9);
+    @include col-offset(md, 1);
+    @include col(md, 8);
+    @include col-offset(xl, 0);
+    @include col(xl, 9);
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
 
     a {
       flex: 0 0;
@@ -73,20 +91,48 @@
 
     @media (min-width: $screen-md) {
       display: flex;
+    }
+
+    @media (min-width: $screen-xl) {
       justify-content: flex-end;
     }
   }
 
   &__contacts {
+    margin-bottom: 42px;
 
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
   }
 
   &__contacts-col {
     @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 4);
+    @include col(xl, 2);
+    margin-bottom: 32px;
+
+    &:nth-child(odd) {
+      @include col-offset(md, 1);
+      @include col-offset(xl, 0);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__contacts-title {
+    padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.75;
+    border-bottom: 1px solid rgba($white, 0.5);
 
+    @media (min-width: $screen-md) {
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+    }
   }
 
   &__copyrights {

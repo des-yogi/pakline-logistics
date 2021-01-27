@@ -1,8 +1,8 @@
 <!--DEV
 @ @include('blocks/breadcrumbs/breadcrumbs.html')
-
-<nav class="breadcrumbs">
-  <h4 class="visually-hidden">Постраничная навигация — ваш путь на сайте</h4>
+aria-current="page" - для ссылки на текущую страницу
+-->
+<nav class="breadcrumbs" aria-label="Постраничная навигация (Breadcrumb - en)">
 
   <ol class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
 
@@ -17,20 +17,19 @@
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
       itemtype="http://schema.org/ListItem">
       <a itemprop="item" href="#" class="breadcrumbs__link">
-        <span itemprop="name">Страница 1</span>
+        <span itemprop="name">Логистические услуги</span>
         <meta itemprop="position" content="2" />
       </a>
     </li>
 
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
       itemtype="http://schema.org/ListItem">
-      <a itemprop="item" href="#" class="breadcrumbs__link">
-        <span itemprop="name">Страница 2</span>
+      <a itemprop="item" href="#" class="breadcrumbs__link" aria-current="page">
+        <span itemprop="name">Фулфилмент. Комплектация заказов</span>
         <meta itemprop="position" content="3" />
       </a>
     </li>
 
   </ol>
 </nav>
--->
 

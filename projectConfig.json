@@ -30,7 +30,15 @@
     "mmenu": [],
     "mhead": [],
     "socials": [],
-    "copyrights": []
+    "copyrights": [],
+    "index-intro": [],
+    "index-contacts": [],
+    "banner": [],
+    "clients": [],
+    "client-card": [],
+    "overlayscrollbars": [],
+    "map": [],
+    "tab-contacts": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

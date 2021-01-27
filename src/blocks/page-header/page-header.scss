@@ -57,7 +57,7 @@
       // }
 
       @media (min-width: $screen-xl) {
-        margin-bottom: 7px;
+        //margin-bottom: 7px;
       }
     }
   }
@@ -80,7 +80,7 @@
     height: 100%;
 
     @media (min-width: $screen-xl) {
-      align-items: baseline;
+      align-items: center;
     }
 
     &::before {
@@ -164,8 +164,9 @@
 
   &--has-background {
     color: $text-color;
-    background-color: $white;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    background-color: rgba($white, 0.95);
+    backdrop-filter: blur(16px);
+    //box-shadow: 0 4px 16px rgba(0,0,0,0.5);
 
     .logo {
 

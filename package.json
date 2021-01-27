@@ -82,6 +82,7 @@
     "mhead-js": "^2.1.0",
     "mmenu-js": "^8.5.21",
     "object-fit-images": "^3.2.4",
+    "perfect-scrollbar": "^1.5.0",
     "picturefill": "^3.0.3",
     "svg4everybody": "^2.1.9",
     "swiper": "^6.4.5"

@@ -1,9 +1,11 @@
-@mixin text-hide {
-  font-size: 0;
-  line-height: 0;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
   border: 0;
 }
 
@@ -27,12 +29,6 @@
       transform: translateY(-3px);
     }
   }
-}
-
-@mixin img-sharp {
-  image-rendering: pixelated;
-   image-rendering: -moz-crisp-edges; /* Firefox */
-   -ms-interpolation-mode: nearest-neighbor; /* IE */
 }
 
 // stylelint-disable property-blacklist

@@ -85,3 +85,17 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     agreementCheckbox.addEventListener('change', agreementHandler);
   }
 })();
+
+//$( document ).ready(function() {
+  // const containers = document.querySelectorAll('.tab-container');
+  // containers.forEach(function (item) {
+  //   const ps = new PerfectScrollbar(item, {
+  //     //wheelSpeed: 2,
+  //     wheelPropagation: true,
+  //     minScrollbarLength: 48
+  //   });
+  // });
+
+  //If the size of your container or content changes, call update.
+  //ps.update();
+//});
