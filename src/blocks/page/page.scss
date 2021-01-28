@@ -40,34 +40,38 @@
     }
 
     &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $overlay-color;
 
-      @media (min-width: $screen-xl) {
-        display: block;
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: $overlay-color;
-      }
+      // @media (min-width: $screen-xl) {
+      // }
     }
 
     &--no-index {
+      height: 160px;
       margin-bottom: 42px;
+      background-color: $overlay-color;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      // маленькая картинка
+      background-image: url(../img/non-index-header-bg.jpg);
 
       @media (min-width: $screen-md) {
         margin-bottom: 64px;
+        // средняя картинка
       }
 
       @media (min-width: $screen-xl) {
-        height: 160px;
         //padding-bottom: 64px;
-        background-color: $overlay-color;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-image: url(../img/non-index-header-bg.jpg);
+        // большая картинка
+
       }
     }
   }
@@ -75,6 +79,14 @@
   &__footer-wrapper {
     flex-shrink: 0;
     padding-top: 128px;
+  }
+
+  &__regular-col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 12);
   }
 }
 
@@ -371,6 +383,8 @@ a {
 
 /* &__element {
   @include col(xs, 12, $grid-columns, 14px);
+  @include col-offset(md, 1);
+  @include col(md, 10);
 
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
   @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px

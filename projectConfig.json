@@ -38,7 +38,9 @@
     "client-card": [],
     "overlayscrollbars": [],
     "map": [],
-    "tab-contacts": []
+    "tab-contacts": [],
+    "titled-text-block": [],
+    "media-block": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

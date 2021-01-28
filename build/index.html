@@ -361,8 +361,8 @@
         <div class="container">
           <div class="row  index-intro">
             <div class="index-intro__col">
-              <h1 class="h2" style="margin-top:0">ТМ PAKLINE Logistics</h1>
-              <p class="h4">Это удовлетворение потребностей клиентов, обеспечение высочайшего уровня обслуживания и сервиса, который адаптирован к индивидуальным особенностям вашего бизнеса.</p>
+              <h1 class="h2 index-intro__title">ТМ PAKLINE Logistics</h1>
+              <p class="h4 index-intro__subtitle">Это удовлетворение потребностей клиентов, обеспечение высочайшего уровня обслуживания и сервиса, который адаптирован к индивидуальным особенностям вашего бизнеса.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique pellentesque faucibus ipsum at sit nunc. Venenatis eu nec volutpat ut sit faucibus lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </div>
@@ -451,7 +451,8 @@
                 </div>
               </div>
               <div class="index-contacts__map">
-                <div class="map">
+                <div id="map-container" class="map">
+                  <h3>Карта</h3>
                   <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
                 </div>
               </div>
@@ -486,7 +487,7 @@
                 <p>Виявили високий рівень професіоналізму та компетентності</p>
               </div>
               <div class="clients__body">
-                <ul class="row  clients__list">
+                <ul id="clients-container" class="row  clients__list">
                   <li class="clients__item">
                     <div class="client-card">
                       <div class="client-card__img">
@@ -545,7 +546,12 @@
                 </ul>
               </div>
               <div class="clients__btn-wrapper">
-                <button class="btn" type="button"><span>Показать ещё</span></button>
+                <button id="more-clients" class="btn  btn--xl" type="button">
+                  <span class="btn__text">Показать ещё</span>
+                  <span class="btn__icon">
+                    <svg width="11" height="17"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-down-icon"/></svg>
+                  </span>
+                </button>
               </div>
             </section>
           </div>

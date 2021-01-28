@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!toggler) {
     return;
-    //toggler.addEventListener('click', desktopMenuToggle);
   }
 
   checkWidth();
