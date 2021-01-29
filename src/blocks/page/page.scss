@@ -25,6 +25,26 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    &--404 {
+      background-color: $overlay-color;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: $overlay-color;
+        backdrop-filter: blur(32px);
+      }
+    }
   }
 
   &__content {
@@ -74,6 +94,15 @@
 
       }
     }
+
+    &--404 {
+      background-color: transparent;
+      background-image: none;
+
+      &::after {
+        background-color: transparent;
+      }
+    }
   }
 
   &__footer-wrapper {
@@ -87,6 +116,31 @@
     @include col(md, 10);
     @include col-offset(xl, 0);
     @include col(xl, 12);
+  }
+
+  &__text-nav-col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 4);
+  }
+
+  &__text-content-col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 8);
+  }
+
+  &__text-header-col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 4);
+    @include col(xl, 8);
+    margin-bottom: 40px;
   }
 }
 

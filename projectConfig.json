@@ -40,7 +40,12 @@
     "map": [],
     "tab-contacts": [],
     "titled-text-block": [],
-    "media-block": []
+    "media-block": [],
+    "decorated-list": [],
+    "text-page-header": [],
+    "text-page-content": [],
+    "aside-nav": [],
+    "page-404": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
