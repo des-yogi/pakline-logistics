@@ -45,7 +45,15 @@
     "text-page-header": [],
     "text-page-content": [],
     "aside-nav": [],
-    "page-404": []
+    "page-404": [],
+    "simple-contact-form": [],
+    "big-contact-form": [],
+    "field-checkbox": [],
+    "field-file": [],
+    "field-select": [],
+    "field-text": [],
+    "vacancy-block": [],
+    "partners-list": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

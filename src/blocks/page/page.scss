@@ -68,6 +68,7 @@
       left: 0;
       right: 0;
       background-color: $overlay-color;
+      //backdrop-filter: blur(8px);
 
       // @media (min-width: $screen-xl) {
       // }
@@ -141,6 +142,13 @@
     @include col-offset(xl, 4);
     @include col(xl, 8);
     margin-bottom: 40px;
+  }
+
+  &__col-1-2-4 {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 6);
+    @include col(xl, 3);
+    margin-bottom: 24px;
   }
 }
 

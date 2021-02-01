@@ -87,4 +87,13 @@
       margin-top: 10px;
     }
   }
+
+  &__btn {
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+    }
+  }
 }

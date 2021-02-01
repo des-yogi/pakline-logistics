@@ -49,6 +49,7 @@
 
     .logo {
       margin: auto 0;
+      color: inherit;
       // margin-top: auto;
       // margin-bottom: 13px;
 
@@ -58,6 +59,15 @@
 
       @media (min-width: $screen-xl) {
         //margin-bottom: 7px;
+      }
+
+      &:hover,
+      &:focus {
+        color: $main-color;
+      }
+
+      svg #text-group {
+        fill: currentColor;
       }
     }
   }
@@ -110,7 +120,8 @@
 
     &:hover,
     &:focus {
-      color: currentColor;
+      //color: currentColor;
+      text-decoration: none;
     }
   }
 
@@ -132,9 +143,15 @@
     font-size: 18px;
     font-weight: 500;
     color: inherit;
+    transition: color 0.2s ease;
 
     &::after {
       display: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: $main-color;
     }
   }
 

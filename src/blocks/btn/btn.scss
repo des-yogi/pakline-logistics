@@ -80,23 +80,24 @@
     padding: 12px !important;
   }
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
+  &--banner {
+    // color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
 
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
+    &:hover,
+    &:focus {
+      // color: #fff;
+      background-color: rgba(8, 165, 224, 0.5);
+      border-color: $main-color;
+    }
 
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+    &--disabled,
+    &:disabled {
+      color: $text-muted;
+      background-color: rgba(115, 127, 139, 0.35);
+      border-color: rgba(115, 127, 139, 0.15);
+    }
+  }
 }
