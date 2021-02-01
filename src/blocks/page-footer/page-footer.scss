@@ -1,8 +1,149 @@
-// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-footer {
+  position: relative;
+  min-height: 100px;
+  padding-top: 64px;
+  padding-bottom: 24px;
+  font-size: 14px;
+  color: $white;
+  //background-color: $overlay-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/footer-bg.jpg);
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 32px;
+  }
 
   $block-name:                &; // #{$block-name}__element
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $overlay-color;
+    backdrop-filter: blur(64px);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  a[href^="mailto"],
+  a[href^="tel"] {
+    color: $white;
+  }
+
+  &__top {
+    margin-bottom: 42px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__top-left {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 8);
+    @include col-offset(xl, 0);
+    @include col(xl, 9);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    a {
+      flex: 0 0;
+      margin-bottom: 16px;
+
+      @media (min-width: $screen-md) {
+        margin-right: 32px;
+        margin-bottom: 24px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 0;
+      }
+    }
+
+    span {
+      flex: 1 1;
+      flex-basis: auto;
+
+      @media (min-width: $screen-md) {
+        max-width: 400px;
+      }
+    }
+  }
+
+  &__top-right {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 3);
+
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+
+    @media (min-width: $screen-xl) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__contacts {
+    margin-bottom: 42px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__contacts-col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 4);
+    @include col(xl, 2);
+    margin-bottom: 32px;
+
+    &:nth-child(odd) {
+      @include col-offset(md, 1);
+      @include col-offset(xl, 0);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contacts-title {
+    padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.75;
+    border-bottom: 1px solid rgba($white, 0.5);
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__copyrights {
+
+  }
+
+  &--404 {
+    background-image: none;
+
+    &::before {
+      display: none;
+    }
+  }
 }

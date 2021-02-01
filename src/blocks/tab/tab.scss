@@ -12,61 +12,90 @@ $field-padding-vertical:      0.3em !default;
 $field-padding-horizontal:    0.7em !default;
 
 .tabs {
+  background-color: $white;
+
+  @media (min-width: $screen-xl) {
+    padding: 0 16px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
-  margin-top: $line-height;
-  margin-bottom: $line-height;
+  &__col-inner {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 12);
+  }
 
   &__links {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    cursor: pointer;
+    //flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+    box-shadow: 0px 30px 40px rgba(212, 217, 232, 0.3);
+    overflow-x: auto;
 
-    &:after {
-      content: '';
-      flex-grow: 1;
-      height: 1px;
-      background-color: $border-color;
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 
   &__link-wrap {
+    flex: 0 1;
+    flex-basis: auto;
     position: relative;
-    border: 1px solid $border-color;
+    //border: 1px solid $border-color;
 
     &:not(:last-child) {
-      border-right: none;
+      margin-right: 16px;
+
+      @media (min-width: $screen-md) {
+        margin-right: 32px;
+      }
     }
   }
 
   &__link {
-    display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    color: $text-muted;
-    text-decoration: none;
-    background-color: $gray-lightest;
+    display: inline-block;
+    vertical-align: top;
+    padding: 22px 0 20px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    color: $text-color;
+    background-color: $white;
+    border-bottom: 2px solid transparent;
 
     &:hover,
     &:focus {
-      color: $text-muted;
+      text-decoration: none;
+      color: $main-color;
     }
 
     &.active {
-      color: $text-color;
-      background-color: #fff;
+      color: $main-color;
+      border-color: $main-color;
     }
   }
 
   &__content-wrapper {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    border: 1px solid $border-color;
-    border-top: none;
+    padding: 16px 0;
+    background-color: $white;
+    border-top: 1px solid $divider-color;
+
+    @media (min-width: $screen-md) {
+      padding: 24px 0;
+    }
   }
 
   &__content-item {
@@ -74,6 +103,22 @@ $field-padding-horizontal:    0.7em !default;
 
     &.active {
       display: block;
+    }
+  }
+
+  &__content {
+    height: 340px;
+    padding-right: 12px;
+    overflow-y: auto;
+
+    @media (min-width: $screen-md) {
+      height: 365px;
+      padding-right: 16px;
+    }
+
+    @media (min-width: $screen-xl) {
+      height: 420px;
+      padding: 0 16px;
     }
   }
 }

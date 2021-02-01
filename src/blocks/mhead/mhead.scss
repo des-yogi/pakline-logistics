@@ -1,0 +1,22 @@
+.mh-sticky {
+  //position: -webkit-sticky;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.mh-sticky.mh-unpinned {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+
+.mhead {
+  $block-name:                &; // #{$block-name}__element
+}

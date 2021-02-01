@@ -1,162 +1,94 @@
-// В этом файле должны быть стили для БЭМ-блока main-nav, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
-$gray-lightest:               hsl(0, 0%, 90%) !default;
-
-$screen-xs:                   0 !default;
-$screen-sm:                   480px !default;
-$screen-md:                   768px !default;
-$screen-lg:                   992px !default;
-$screen-xl:                   1200px !default;
-$screen-xxl:                  1800px !default;
-
-$menu-desktop-width:          $screen-xl !default;
-$toggler-part-height:         3px !default;
-$toggler-part-bg-color:       #000 !default;
-
-$transition-time:             0.3s !default;
-
 .main-nav {
+
 
   $block-name:                &; // #{$block-name}__element
 
-  position: relative;
-  z-index: 10;
+  display: none;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-top: 160px;
+  padding-bottom: 48px;
+  background-color: $overlay-color;
+  backdrop-filter: blur(64px);
+  overflow-y: auto;
 
   // первый уровень
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
+    color: $white;
 
-    // мобильный вид списка
-    @media (max-width: ($menu-desktop-width - 1)) {
+    ul {
+      padding-left: 8px;
 
-      // открытие/закрытие меню только в случае работающего JS
+      ul > li {
 
-      .js & {
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s;
-      }
-
-      .js #{$block-name}--open & {
-        max-height: 100vh;
-        transition: max-height 0.6s;
+        & > a {
+          font-size: 14px;
+        }
       }
     }
 
-    // настольный вид списка
-    @media (min-width: $menu-desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
+    & > li {
+
+      & > a {
+        font-weight: 600;
+      }
+    }
+
+    li.active {
+
+      & > a {
+        color: $link-color;
+        pointer-events: none;
+      }
+    }
+
+    a {
+      display: inline-block;
+      vertical-align: baseline;
+      padding: 5px 0;
+      line-height: 1.35;
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
     }
   }
 
   &__item {
-    position: relative;
+    @include col(md, 4);
+    margin-bottom: 64px;
 
-    &--active {
+    & > ul {
+      padding-top: 12px;
+      margin-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
 
-      & > #{$block-name}__link {
-        color: red;
+      & > li:not(:first-child) {
+        padding-top: 8px;
+        margin-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      & > li > a {
+        font-weight: 500;
       }
     }
   }
 
   &__link {
     display: block;
-    padding: 0.5em;
-    text-decoration: none;
-    background-color: #fff;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      background-color: aquamarine;
-    }
-
-    &--lvl-2 {
-
-      @media (max-width: ($menu-desktop-width - 1)) {
-        padding-left: 1.2em;
-      }
-    }
-
-    &--lvl-3 {
-
-      @media (max-width: ($menu-desktop-width - 1)) {
-        padding-left: 2.4em;
-      }
-    }
   }
 
-  &__sublist-wrapper {
-
-    &--lvl-2 {
-
-      @media (min-width: $menu-desktop-width) {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
-
-        // stylelint-disable  max-nesting-depth
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
-        }
-        // stylelint-enable
-      }
-    }
-
-    &--lvl-3 {
-
-      @media (min-width: $menu-desktop-width) {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 100%;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
-
-        // stylelint-disable  max-nesting-depth
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item--lvl-2:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
-        }
-        // stylelint-enable
-      }
-    }
-  }
-
-
-
-  // переключатель
-
-  &__toggler {
-    display: inline-block;
-    padding: 0;
-    background: none;
-    border: none;
-
-    .no-js & {
-      display: none;
-    }
-
-    @media (min-width: $menu-desktop-width) {
-      display: none;
-    }
+  &--show {
+    display: block;
   }
 }

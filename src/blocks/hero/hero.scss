@@ -1,0 +1,203 @@
+.hero {
+  height: 100vh;
+  max-height: 100vh;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  &__slide {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #051d2f;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $overlay-color;
+      pointer-events: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .container {
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__slide-inner {
+    position: absolute;
+    top: 112px;
+    bottom: 58px;
+    left: 15px;
+    right: 15px;
+
+    color: white;
+
+    @media (min-width: $screen-md) {
+      top: 132px;
+      bottom: 60px;
+      left: 28px;
+      right: 28px;
+    }
+
+    @media (min-width: $screen-xl) {
+      bottom: 104px;
+      $padding-min: 108px; // нужный отступ от краев экрана
+      $half-screen-xl: $screen-xl / 2 - $padding-min;
+      // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
+      left: calc(50% - #{$half-screen-xl});
+      right: calc(50% - #{$half-screen-xl});
+    }
+
+    .row {
+      height: 100%;
+      align-content: space-between;
+
+      @media (min-width: $screen-md) {
+        align-content: flex-end;
+      }
+    }
+  }
+
+  &__text {
+    @include col(xs, 10, $grid-columns, 14px);
+    @include col(md, 9);
+    @include col(xl, 10);
+  }
+
+  &__btns {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 9);
+    @include col(xl, 10);
+  }
+
+  &__text:not(.hero__title) {
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: $font-size--display / 2;
+    font-weight: 600;
+    line-height: 1.1;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size--display;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 12px -12px 0;
+
+    @media (min-width: $screen-md) {
+      margin-top: 20px;
+    }
+
+    & > * {
+      margin: 12px;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 110px;
+    bottom: 24px;
+    left: 15px;
+    right: 15px;
+    //z-index: 100;
+
+    color: white;
+
+    @media (min-width: $screen-md) {
+      top: 130px;
+      bottom: 64px;
+      left: 28px;
+      right: 28px;
+    }
+
+    @media (min-width: $screen-xl) {
+      bottom: 108px;
+      $padding-min: 108px; // нужный отступ от краев экрана
+      $half-screen-xl: $screen-xl / 2 - $padding-min;
+      // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
+      left: calc(50% - #{$half-screen-xl});
+      right: calc(50% - #{$half-screen-xl});
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      @media (min-width: $screen-xs) and (orientation: landscape) {
+        text-align: right;
+      }
+
+      @media (min-width: $screen-md) {
+        text-align: right;
+      }
+    }
+  }
+
+  &__arrow-controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    @media (min-width: $screen-md) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    * + * {
+      margin-top: 24px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: static;
+      width: 26px;
+      height: 26px;
+      color: inherit;
+
+      &::after {
+        display: none;
+      }
+
+      svg {
+        transition: fill 0.2s ease;
+      }
+
+      &:hover,
+      &:focus {
+
+        svg {
+          fill: $main-color;
+        }
+      }
+    }
+  }
+}

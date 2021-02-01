@@ -25,6 +25,11 @@
     border: 0;
   }
 
+  img {
+    object-fit: cover;
+    object-position: center;
+  }
+
   &--21-9 { // модификатор на случай вставки 21/9
 
     &::before {

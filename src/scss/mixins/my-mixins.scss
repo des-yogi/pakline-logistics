@@ -1,9 +1,11 @@
-@mixin text-hide {
-  font-size: 0;
-  line-height: 0;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
   border: 0;
 }
 
@@ -29,12 +31,6 @@
   }
 }
 
-@mixin img-sharp {
-  image-rendering: pixelated;
-   image-rendering: -moz-crisp-edges; /* Firefox */
-   -ms-interpolation-mode: nearest-neighbor; /* IE */
-}
-
 // stylelint-disable property-blacklist
 @mixin transition($transition...) {
   @if $enable-transitions {
@@ -50,4 +46,20 @@
       transition: none;
     }
   }
+}
+
+@mixin btn-templ {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 4px 8px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  user-select: none;
+  cursor: pointer;
 }

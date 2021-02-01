@@ -25,14 +25,130 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    &--404 {
+      background-color: $overlay-color;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: $overlay-color;
+        backdrop-filter: blur(32px);
+      }
+    }
   }
 
   &__content {
     flex-grow: 1;
   }
 
+  &__header-wrapper {
+    position: relative;
+    margin-bottom: 128px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 160px;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $overlay-color;
+      //backdrop-filter: blur(8px);
+
+      // @media (min-width: $screen-xl) {
+      // }
+    }
+
+    &--no-index {
+      height: 160px;
+      margin-bottom: 42px;
+      background-color: $overlay-color;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      // маленькая картинка
+      background-image: url(../img/non-index-header-bg.jpg);
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 64px;
+        // средняя картинка
+      }
+
+      @media (min-width: $screen-xl) {
+        //padding-bottom: 64px;
+        // большая картинка
+
+      }
+    }
+
+    &--404 {
+      background-color: transparent;
+      background-image: none;
+
+      &::after {
+        background-color: transparent;
+      }
+    }
+  }
+
   &__footer-wrapper {
     flex-shrink: 0;
+    padding-top: 128px;
+  }
+
+  &__regular-col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 12);
+  }
+
+  &__text-nav-col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 4);
+  }
+
+  &__text-content-col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 8);
+  }
+
+  &__text-header-col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 4);
+    @include col(xl, 8);
+    margin-bottom: 40px;
+  }
+
+  &__col-1-2-4 {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 6);
+    @include col(xl, 3);
+    margin-bottom: 24px;
   }
 }
 
@@ -46,9 +162,24 @@ body {
   // Типографика проекта — в блоке typo
   display: flex;           // Исправляем баг в IE для min-height and flexbox (flex-direction:column)
   flex-direction: column;  // и прижимаем footer в IE 10-11
-  background-color: #fff;
+  background-color: $body-bg;
   margin: 0;
   min-height: 100%;
+
+  &.fixed {
+    overflow: hidden;
+
+    // .page-header {
+
+    //   @media (max-width: 1439px) {
+    //     left: -17px;
+    //   }
+
+    //   @media (min-width: $screen-xl) {
+    //     left: -8px;
+    //   }
+    // }
+  }
 }
 
 [tabindex='-1']:focus {
@@ -77,6 +208,7 @@ select,
 textarea {
   touch-action: manipulation; // Стилевая коррекция 300ms задержки (для поддерживающих браузеров)
   margin: 0;                  // Убираем margin в Firefox и Safari
+  font-family: inherit;
 }
 
 button,
@@ -133,11 +265,12 @@ img {
 
 a {
   color: $link-color;
-  background-color: transparent;
+  text-decoration: none;
   transition: color 0.3s;
 
   &:hover,
   &:focus {
+    text-decoration: underline;
     color: $link-color--hover;
   }
 
@@ -201,7 +334,6 @@ a {
   @include transition($transition-collapse);
 }
 
-
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -257,17 +389,17 @@ a {
 .container {
   display: block;
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
   background: none;
 
   @media (min-width: $screen-md) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 
   @media (min-width: $screen-xl) {
-    $padding-min: 15px; // нужный отступ от краев экрана
+    $padding-min: 108px; // нужный отступ от краев экрана
     $half-screen-xl: $screen-xl / 2 - $padding-min;
     // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
     padding-left: calc(50% - #{$half-screen-xl});
@@ -277,18 +409,45 @@ a {
 
 // Родитель. Указаны промежутки между ячейками: XS|SM|MD|LG|XL|XXL;
 // @include row($grid-gutter-width, 10px, 12px, 16px, 20px, 26px);
-// .row {
-//   @include row(
-//     $xs-grid-gutter:  20px,
-//     $sm-grid-gutter:  20px,
-//     $md-grid-gutter:  $grid-gutter-width,
-//     $lg-grid-gutter:  $grid-gutter-width,
-//     $xl-grid-gutter:  $grid-gutter-width,
-//     $xxl-grid-gutter: $grid-gutter-width
-//   );
-// }
+.row {
+  @include row(
+    $xs-grid-gutter:  14px,
+    $sm-grid-gutter:  14px,
+    $md-grid-gutter:  $grid-gutter-width,
+    $lg-grid-gutter:  $grid-gutter-width,
+    $xl-grid-gutter:  $grid-gutter-width,
+    $xxl-grid-gutter: $grid-gutter-width
+  );
+}
+
+// Swiper
+.swiper-pagination {
+
+}
+.swiper-pagination-bullet {
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  margin-right: 12px;
+  border: 1.5px solid currentColor;
+  border-radius: $border-radius;
+  background-color: transparent;
+  opacity: 1;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $white;
+}
 
 /* &__element {
+  @include col(xs, 12, $grid-columns, 14px);
+  @include col-offset(md, 1);
+  @include col(md, 10);
+
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
   @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
   @include col(md, 4, $grid-columns, 12px);  // MD (768 по умолчанию) — 4 из 12, промежутки 12px
@@ -298,5 +457,48 @@ a {
 } */
 
 
-// background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
+// background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
 
+* {
+  //Firefox only
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-color: $main-color $divider-color;
+  scrollbar-width: thin;  /* толщина */
+
+  //for webkit browsers (Chrome, Opera, Safary, Edge ets.)
+  //Here is a complete list of all the new pseudo-elements. All of these pseudo-elements must be prefixed with -webkit-:
+  // scrollbar
+  // scrollbar-button
+  // scrollbar-track
+  // scrollbar-track-piece
+  // scrollbar-thumb
+  // scrollbar-corner
+  // resize
+
+  /* полоса прокрутки (скроллбар) */
+  ::-webkit-scrollbar {
+      width: 6px; /* ширина для вертикального скролла */
+      height: 6px; /* высота для горизонтального скролла */
+      background-color: $divider-color;
+  }
+
+  /* ползунок скроллбара */
+  ::-webkit-scrollbar-thumb {
+    background-color: $main-color;
+    border-radius: 8px;
+    box-shadow: none;
+    //box-shadow: inset 1px 1px 10px #f3faf7;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: darken($main-color, 5%);
+  }
+}
+
+.invisible-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

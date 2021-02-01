@@ -1,11 +1,42 @@
 <!--DEV
-
 Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-header/page-header.html')
-
 -->
 
-<header class="page-header" role="banner">
-  page-header
+<header id="sticky-header" class="container  page-header" data-route="@@pageType" role="banner">
+  <div class="page-header__inner">
+    <div class="row">
+      <div class="page-header__logo">
+        @@include('../../blocks/logo/logo.html')
+      </div>
+      <div class="page-header__menu">
+
+        <div class="page-header__menu-inner">
+          <a href="tel:+0800303006" class="page-header__tel"><span>0 (800) 303 006</span></a>
+
+          <div class="page-header__order  dropdown" id="view-order">
+            <button class="page-header__order-btn  dropdown-toggle" type="button" id="view-order-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="page-header__btn-text">Відстежити замовлення</span>
+              <span class="page-header__btn-icon">
+                <svg width="26" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-trifold-icon"></use></svg>
+              </span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="view-order">
+              <div>
+                Контент
+              </div>
+            </div>
+          </div>
+
+          @@include('../../blocks/lang-switcher/lang-switcher.html')
+
+          <button id="burger" class="burger burger--open" type="button">
+            <span class="page-header__btn-text  burger__text">Меню</span>
+            <span class="page-header__btn-icon  burger__icon"></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </header>

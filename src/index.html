@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Home page</title>
   @@include('_include/page_head.html', {
+      "title": "Pakline Logistics home page",
       "pageType": "index"
   })
 </head>
@@ -12,19 +12,236 @@
 <body>
 <noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
 
-  <div class="page__inner">
+  <div id="page" class="page__inner">
 
     <div class="page__content">
-      @@include('blocks/page-header/page-header.html', {
-          "pageType": "index"
-      })
+      <div class="page__header-wrapper  page__header-wrapper--"><!-- добавить модификатор для неглавной --no-index -->
+        @@include('blocks/hero/hero.html')
+        @@include('blocks/main-nav/main-nav.html')
+        @@include('blocks/page-header/page-header.html', {
+            "pageType": "index"
+        })
+        <!-- TODO: убрать "pageType": "index" не для главной -->
+      </div>
 
       <main role="main">
 
         <div class="container">
 
+          <div class="row  index-intro">
+            <div class="index-intro__col">
+              <h1 class="h2 index-intro__title">ТМ PAKLINE Logistics</h1>
+              <p class="h4 index-intro__subtitle">Это удовлетворение потребностей клиентов, обеспечение высочайшего уровня обслуживания и сервиса, который адаптирован к индивидуальным особенностям вашего бизнеса.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique pellentesque faucibus ipsum at sit nunc. Venenatis eu nec volutpat ut sit faucibus lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+
+          <section class="index-contacts">
+            <div class="index-contacts__row">
+
+              <div class="index-contacts__header">
+                <h2>Складские комплексы и офисы</h2>
+                <p>Подберите себе удобный график работы</p>
+              </div>
+
+              <div class="index-contacts__tabs">
+                <div class="tabs">
+                  <div class="row">
+
+                    <div class="tabs__col-inner">
+                      <ul class="nav nav-tabs  tabs__links  invisible-scrollbar" id="addressTab" role="tablist">
+                        <li class="nav-item  tabs__link-wrap">
+                          <a class="nav-link  tabs__link active" id="name-01" data-toggle="tab" href="#tab-01" role="tab" aria-controls="tab-01" aria-selected="true">Складские комплексы</a>
+                        </li>
+                        <li class="nav-item  tabs__link-wrap">
+                          <a class="nav-link  tabs__link" id="name-02" data-toggle="tab" href="#tab-02" role="tab" aria-controls="tab-02" aria-selected="false">CDP Платформами</a>
+                        </li>
+                        <li class="nav-item  tabs__link-wrap">
+                          <a class="nav-link  tabs__link" id="name-03" data-toggle="tab" href="#tab-03" role="tab" aria-controls="tab-03" aria-selected="false">Офисы</a>
+                        </li>
+                      </ul>
+
+                      <div class="tab-content  tabs__content-wrapper" id="addressTabContent">
+                        <div class="tab-pane tabs__content-item fade show active" id="tab-01" role="tabpanel" aria-labelledby="name-01">
+                          <div class="tabs__content">
+                            <ul class="list-nostyled  tab-contacts">
+                              <li>
+                                <h5>г. Киев</h5>
+                                <p>просп. Степана Бандеры, 43</p>
+                                <h6>Режим работы:</h6>
+                                <p>
+                                  Пн–Пт - 09:00-22:00 <br>
+                                  Сб–Вс - 09:00-22:00
+                                </p>
+                                <h6>Телефоны:</h6>
+                                <p>
+                                  <a href="tel:+0800300353">0 (800) 300 353</a> <br>
+                                  <a href="tel:+0800300353">0 (800) 300 353</a>
+                                </p>
+                                <h6>Площадь:</h6>
+                                <p>
+                                  ?????????????? м<sup>2</sup>
+                                </p>
+                                <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вскоре послушавшись то курсивных повстречался?</p>
+                              </li>
+                              <li>
+                                <h5>г. Сумы</h5>
+                                <p>просп. Степана Бандеры, 43</p>
+                                <h6>Режим работы:</h6>
+                                <p>
+                                  Пн–Пт - 09:00-22:00 <br>
+                                  Сб–Вс - 09:00-22:00
+                                </p>
+                                <h6>Телефоны:</h6>
+                                <p>
+                                  <a href="tel:+0800300353">0 (800) 300 353</a> <br>
+                                  <a href="tel:+0800300353">0 (800) 300 353</a>
+                                </p>
+                                <h6>Площадь:</h6>
+                                <p>
+                                  ?????????????? м<sup>2</sup>
+                                </p>
+                                <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вскоре послушавшись то курсивных повстречался?</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="tab-pane tabs__content-item fade" id="tab-02" role="tabpanel" aria-labelledby="name-02">
+                          <div class="tabs__content">
+                            Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+                          </div>
+                        </div>
+                        <div class="tab-pane tabs__content-item fade" id="tab-03" role="tabpanel" aria-labelledby="name-03">
+                          <div class="tabs__content">
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="index-contacts__map">
+                <div id="map-container" class="map">
+                  <h3>Карта</h3>
+                  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                </div>
+              </div>
+            </div>
+
+          </section>
 
         </div>
+
+          <aside class="container  banner">
+            <div class="row">
+              <div class="banner__text-col">
+                <h2 class="h3  banner__title">Вместе против COVID-19</h2>
+                <p>Мы принимаем необходимые меры для обеспечения безопасности наших сотрудников и наших клиентов.</p>
+                <p>Наша компания следует рекомендациям Всемирной организации здравоохранения. По мере развития ситуации с COVID-19 мы будем принимать соответствующие меры. Наш приоритет – здоровье и безопасность. Мы приняли ряд мер предосторожности для обеспечения безопасного процесса доставки: самоизоляция для заболевших водителей и усиление повсеместной санитарии. Также были приняты ряд мер для борьбы с COVID-19:</p>
+                <ul>
+                  <li>Соблюдение общепринятых правил гигиены на рабочих местах</li>
+                  <li>Социальное дистанцирование</li>
+                  <li>Интенсивное и частое мытье рук</li>
+                  <li>Санитарная обработка транспортных средств и дополнительная уборка помещений</li>
+                </ul>
+                <p>На сегодняшний день все доставки осуществляются с соблюдением соответствующего графика.</p>
+              </div>
+              <div class="banner__img-col">
+                <img class="b-lazy"
+                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-srcset="img/banner-img.png 320w,
+                                  img/banner-img.png 640w,
+                                  img/banner-img.png 1366w"
+                        data-src="img/banner-img.png"
+                        alt="Картинка"
+                        width=""
+                        height="">
+              </div>
+            </div>
+          </aside>
+
+          <div class="container">
+            <section class="clients">
+              <div class="clients__header">
+                <h2>Наши клиенты</h2>
+                <p>Виявили високий рівень професіоналізму та компетентності</p>
+              </div>
+              <div class="clients__body">
+                <ul id="clients-container" class="row  clients__list">
+                  <li class="clients__item">
+                    <div class="client-card">
+                      <div class="client-card__img">
+                        <img data-src="img/client-1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Клиент" width="387" height="160">
+                      </div>
+                      <div class="client-card__text">
+                        <h3 class="visually-hidden">Название клиента</h3>
+                        <span>Виявили високий рівень професіоналізму, компетентності, а також зацікавленості у найкращому виконанні своїх обов'язків</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="clients__item">
+                    <div class="client-card">
+                      <div class="client-card__img">
+                        <img data-src="img/client-2.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Клиент" width="387" height="160">
+                      </div>
+                      <div class="client-card__text">
+                        <h3 class="visually-hidden">Название клиента</h3>
+                        <span>Виявили високий рівень професіоналізму, компетентності, а також зацікавленості у найкращому виконанні своїх обов'язків</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="clients__item">
+                    <div class="client-card">
+                      <div class="client-card__img">
+                        <img data-src="img/client-3.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Клиент" width="387" height="160">
+                      </div>
+                      <div class="client-card__text">
+                        <h3 class="visually-hidden">Название клиента</h3>
+                        <span>Виявили високий рівень професіоналізму, компетентності, а також зацікавленості у найкращому виконанні своїх обов'язків</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="clients__item">
+                    <div class="client-card">
+                      <div class="client-card__img">
+                        <img data-src="img/client-4.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Клиент" width="387" height="160">
+                      </div>
+                      <div class="client-card__text">
+                        <h3 class="visually-hidden">Название клиента</h3>
+                        <span>Виявили високий рівень професіоналізму, компетентності, а також зацікавленості у найкращому виконанні своїх обов'язків</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="clients__item">
+                    <div class="client-card">
+                      <div class="client-card__img">
+                        <img data-src="img/client-5.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Клиент" width="387" height="160">
+                      </div>
+                      <div class="client-card__text">
+                        <h3 class="visually-hidden">Название клиента</h3>
+                        <span>Виявили високий рівень професіоналізму, компетентності, а також зацікавленості у найкращому виконанні своїх обов'язків</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="clients__btn-wrapper">
+                <button id="more-clients" class="btn  btn--xl" type="button">
+                  <span class="btn__text">Показать ещё</span>
+                  <span class="btn__icon">
+                    <svg width="11" height="17"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-down-icon"></use></svg>
+                  </span>
+                </button>
+              </div>
+            </section>
+          </div>
 
       </main>
 
@@ -34,8 +251,10 @@
       @@include('blocks/page-footer/page-footer.html')
     </div>
 
+
   </div>
 
+  @@include('blocks/mmenu/mmenu.html')
   @@include('_include/page_bottom.html')
 
 </body>

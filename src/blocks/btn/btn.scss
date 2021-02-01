@@ -1,37 +1,37 @@
-// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .btn {
 
   $block-name:                &; // #{$block-name}__element
 
   box-sizing: border-box;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  //vertical-align: middle;
   margin: 0;
-  // padding: $field-padding-vertical  $field-padding-horizontal;
+  padding: 4px 8px;
   white-space: nowrap;
-  vertical-align: middle;
   user-select: none;
   text-align: center;
-  font-size: 1em;
+  font-size: 16px;
+  font-weight: 500;
   font-family: inherit;
-  line-height: $line-height;
+  line-height: 22px;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
+  color: $white;
   border-radius: $border-radius;
-  border: 1px solid $gray-lighter;
-  background-color: $gray-lightest;
+  border: 1px solid $text-color;
+  background-color: $text-color;
   background-image: none;
   cursor: pointer;
+  transition: all 0.2s ease;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $text-color;
-    // background-color: darken($gray-lightest, 10%);
-    // border-color: darken($gray-lighter, 12%);
+    color: $white;
+    background-color: $main-color;
+    border-color: $main-color;
   }
 
   &:active,
@@ -43,39 +43,61 @@
   &:disabled {
     // opacity: $opacity;
     cursor: not-allowed;
-    color: $text-color;
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+    color: $text-muted;
+    background-color: $disabled-bg;
+    border-color: $disabled-bg;
 
     @at-root a.btn--disabled {
       pointer-events: none;
     }
   }
 
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
+  &__text {
+    padding: 0 16px;
+  }
 
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
 
+    svg {
+      fill: currentColor;
+    }
+  }
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
+  &--xl {
+    padding: 11px 16px;
+  }
 
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
+  &--only-icon {
+    padding: 4px !important;
+  }
 
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+  &--only-icon-xl {
+    padding: 12px !important;
+  }
+
+  &--banner {
+    // color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+
+    &:hover,
+    &:focus {
+      // color: #fff;
+      background-color: rgba(8, 165, 224, 0.5);
+      border-color: $main-color;
+    }
+
+    &--disabled,
+    &:disabled {
+      color: $text-muted;
+      background-color: rgba(115, 127, 139, 0.35);
+      border-color: rgba(115, 127, 139, 0.15);
+    }
+  }
 }
