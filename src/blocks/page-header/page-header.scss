@@ -128,8 +128,18 @@
   &__order {
 
     .dropdown-menu {
-      //min-width: 100%;
+      top: 21px !important;
+      min-width: 320px;
       padding: 10px 20px;
+
+      @media (min-width: $screen-md) {
+        top: 29px !important;
+        min-width: 500px;
+      }
+
+      @media (min-width: $screen-xl) {
+        min-width: 565px;
+      }
     }
   }
 
@@ -152,6 +162,65 @@
     &:hover,
     &:focus {
       color: $main-color;
+    }
+  }
+
+  &__form-inner {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .field-text {
+
+      @media (min-width: $screen-md) {
+        flex: 1 1;
+        flex-basis: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        border-bottom: 1px solid $border-color;
+      }
+    }
+
+    .field-text__name {
+
+      @media (min-width: $screen-md) {
+        flex: 0 0;
+        flex-basis: auto;
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+    }
+
+    .field-text__input-wrap {
+
+      @media (min-width: $screen-md) {
+        flex: 1 1;
+        flex-basis: auto;
+      }
+    }
+
+    .field-text__input {
+      padding-left: 15px;
+      background-color: $white;
+      border-bottom-color: transparent;
+    }
+
+    .btn--only-icon-xl {
+
+      @media (min-width: $screen-xs) and (max-width: $screen-md - 1) {
+        display: none;
+      }
+
+      @media (min-width: $screen-md) {
+        display: block;
+        flex: 0 0;
+        flex-basis: 48px;
+      }
     }
   }
 
