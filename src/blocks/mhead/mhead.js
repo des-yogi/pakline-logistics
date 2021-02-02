@@ -35,7 +35,7 @@ document.addEventListener(
     const scrollHandler = function (e) {
       let header = document.getElementById('sticky-header');
       let pageOffset = window.pageYOffset;
-      console.log( pageOffset );
+      //console.log( pageOffset );
       if ( pageOffset < setPinHeight() ) {
         header.classList.remove('page-header--has-background');
       } else if ( pageOffset > setPinHeight() ) {
