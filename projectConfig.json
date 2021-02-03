@@ -53,7 +53,9 @@
     "field-select": [],
     "field-text": [],
     "vacancy-block": [],
-    "partners-list": []
+    "partners-list": [],
+    "media-link": [],
+    "media-link-card": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
