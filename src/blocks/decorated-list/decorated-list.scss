@@ -16,6 +16,20 @@
     @include col(xs, 12, $grid-columns, 14px);
     @include col(md, 6);
     margin-bottom: 24px;
+
+    &:nth-child(odd) {
+
+      @media (min-width: $screen-xl) {
+        padding-right: 32px;
+      }
+    }
+
+    &:nth-child(even) {
+
+      @media (min-width: $screen-xl) {
+        padding-left: 32px;
+      }
+    }
   }
 
   &__title {

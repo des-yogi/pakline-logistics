@@ -1,0 +1,20 @@
+.media-link {
+  margin-top: 112px;
+
+  @media (min-width: $screen-md) {
+    margin-top: 132px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-top: 160px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 6);
+    @include col(xl, 4);
+    margin-bottom: 16px;
+  }
+}
