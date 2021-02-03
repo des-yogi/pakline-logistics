@@ -1,0 +1,170 @@
+.big-contact-form {
+  padding-top: 80px;
+  padding-bottom: 144px;
+  background-color: $white;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col-text {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 8);
+  }
+
+  &__col-img {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 4);
+
+    .row {
+
+      @media (min-width: $screen-xl) {
+        padding-left: 16px;
+        padding-right: 16px;
+     }
+    }
+  }
+
+  &__text {
+
+    @media (min-width: $screen-xl) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  &__descr {
+
+  }
+
+  &__form-wrapper {
+    padding-top: 24px;
+    padding-bottom: 40px;
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__form {
+
+    fieldset {
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+
+    .h5 {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .field-checkbox {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .field-text {
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .field-text__input {
+      background-color: inherit;
+    }
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 6);
+
+    @media (min-width: $screen-xs) and (max-width: $screen-md - 1) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__img-inner-col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 6);
+    @include col(xl, 12);
+
+    &:first-child {
+      margin-bottom: 24px;
+
+      @media (min-width: $screen-md) and (max-width: $screen-xl - 1) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__img {
+    background-color: $overlay-color;
+  }
+
+  &--inside {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 64px;
+    background-color: transparent;
+
+    #{$block-name}__col-text {
+      @include col(xs, 12, $grid-columns, 14px);
+      @include col-offset(md, 0);
+      @include col(md, 12);
+      // @include col(xl, 8);
+    }
+
+    #{$block-name}__col-img {
+      @include col(xs, 12, $grid-columns, 14px);
+      @include col-offset(md, 0);
+      @include col(md, 12);
+      // @include col(xl, 4);
+
+      @media (min-width: $screen-md) {
+        margin-top: 0;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-top: 64px;
+      }
+
+      .row {
+
+        @media (min-width: $screen-xl) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+    #{$block-name}__img-inner-col {
+      @include col(xl, 6);
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 0;
+      }
+    }
+
+    #{$block-name}__text {
+
+      @media (min-width: $screen-xl) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

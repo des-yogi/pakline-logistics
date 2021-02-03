@@ -1,0 +1,50 @@
+.copyrights {
+
+  $block-name:                &; // #{$block-name}__element
+
+  a {
+    color: $white;
+  }
+
+  &__owner {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 5);
+    @include col-offset(xl, 0);
+    @include col(xl, 9);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-direction: row;
+    }
+
+    & > *:not(:last-child) {
+      margin-bottom: 12px;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 0;
+        margin-right: 32px;
+      }
+    }
+  }
+
+  &__dev {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 4);
+    @include col-offset(xl, 0);
+    @include col(xl, 3);
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

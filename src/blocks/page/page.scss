@@ -399,7 +399,7 @@ a {
   }
 
   @media (min-width: $screen-xl) {
-    $padding-min: 108px; // нужный отступ от краев экрана
+    $padding-min: 28px; // нужный отступ от краев экрана
     $half-screen-xl: $screen-xl / 2 - $padding-min;
     // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
     padding-left: calc(50% - #{$half-screen-xl});

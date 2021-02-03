@@ -12,6 +12,7 @@ $field-padding-vertical:      0.3em !default;
 $field-padding-horizontal:    0.7em !default;
 
 .tabs {
+  position: relative;
   background-color: $white;
 
   @media (min-width: $screen-xl) {
@@ -19,6 +20,42 @@ $field-padding-horizontal:    0.7em !default;
   }
 
   $block-name:                &; // #{$block-name}__element
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    height: 64px;
+    width: 14px;
+    background-color: $white;
+
+    @media (min-width: $screen-md) {
+      width: 200px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 16px;
+    }
+  }
+
+  &::before {
+    left: -14px;
+
+    @media (min-width: $screen-md) {
+      left: 0;
+    }
+  }
+
+  &::after {
+    right: -14px;
+
+    @media (min-width: $screen-md) {
+      right: 0;
+    }
+  }
 
   &__col-inner {
     @include col(xs, 12, $grid-columns, 14px);
@@ -36,7 +73,7 @@ $field-padding-horizontal:    0.7em !default;
     //flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 24px;
-    box-shadow: 0px 30px 40px rgba(212, 217, 232, 0.3);
+    box-shadow: 0 30px 40px rgba(212, 217, 232, 0.2); // 0.3
     overflow-x: auto;
 
     @media (min-width: $screen-md) {
@@ -47,6 +84,19 @@ $field-padding-horizontal:    0.7em !default;
       padding-left: 16px;
       padding-right: 16px;
     }
+
+    //&::before,
+    // &::before {
+    //   display: block;
+    //   content: "";
+    //   position: absolute;
+    //   z-index: 0;
+    //   top: 0;
+    //   bottom: 0;
+    //   left: -14px;
+    //   right: -5px;
+    //   background-color: red;
+    // }
   }
 
   &__link-wrap {
@@ -90,7 +140,7 @@ $field-padding-horizontal:    0.7em !default;
   &__content-wrapper {
     display: block;
     padding: 16px 0;
-    background-color: $white;
+    //background-color: $white;
     border-top: 1px solid $divider-color;
 
     @media (min-width: $screen-md) {

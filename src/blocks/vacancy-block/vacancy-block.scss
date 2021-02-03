@@ -1,0 +1,50 @@
+.vacancy-block {
+  margin-bottom: 64px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 80px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col-left,
+  &__col-right {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 6);
+    @include col(xl, 4);
+  }
+
+  &__col-left {
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__inner {
+
+    @media (min-width: $screen-xl) {
+      padding: 0 16px;
+    }
+  }
+
+  // &__list {
+
+  //   &--main {
+
+  //   }
+  // }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__actual {
+
+    .h5 {
+      margin-top: 0;
+    }
+  }
+}

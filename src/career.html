@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  @@include('_include/page_head.html', {
+      "title": "Карьера в компании",
+      "pageType": "career"
+  })
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div id="page" class="page__inner">
+
+    <div class="page__content">
+      <div class="page__header-wrapper  page__header-wrapper--no-index"><!-- добавить модификатор для неглавной --no-index -->
+        <!-- @@include('blocks/hero/hero.html') -->
+        @@include('blocks/main-nav/main-nav.html')
+        @@include('blocks/page-header/page-header.html', {
+            "pageType": ""
+        })
+        <!-- TODO: убрать "pageType": "index" не для главной -->
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="breadcrumbs__wrapper">
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+          </div>
+        </div>
+      </div>
+
+      <main role="main">
+
+        <article class="container">
+          <div class="row">
+            <div class="page__regular-col">
+
+              <div class="row  titled-text-block">
+                <div class="titled-text-block__header">
+                  <div class="titled-text-block__text">
+                    <h1>Карьера</h1>
+                  </div>
+                </div>
+                <div class="titled-text-block__body">
+                  <div class="titled-text-block__text">
+                    <p>Робота в PAKLINE GROUP – це робота в команді професіоналів, яка дозволяє співробітникам розвивати свої навички, отримувати новий досвід та домагатися кар’єрного зростання. Ми запрошуємо вас відкрити для себе нові можливості, які надихають саме Вас. Приєднуйтеся до нашої команди, яка прагне розвивати, навчати, підтримувати співробітників задля забезпечення стабільної якості сервісу, а також надає можливість для особистого та професійного розвитку.</p>
+                  </div>
+                </div>
+              </div>
+
+              <section class="vacancy-block">
+                <h2 class="h3  vacancy-block__inner">Актуальные вакансии</h2>
+                <div class="row">
+
+                  <div class="vacancy-block__col-left">
+                    <div class="vacancy-block__inner">
+
+                      <form id="vacancy" action="" method="post">
+                        <label class="field-select">
+                          <span class="field-select__name  visually-hidden">Выбор региона</span>
+                          <span class="field-select__select-wrap">
+                            <select class="field-select__select">
+                              <option value="" selected>Все регионы</option>
+                              <option value="">Регион 1</option>
+                              <option value="">Регион 2</option>
+                              <option value="">Регион 3</option>
+                            </select>
+                            <span class="small field-select__help-text"></span>
+                          </span>
+                        </label>
+                        <label class="field-select">
+                          <span class="field-select__name  visually-hidden">Выбор рубрики</span>
+                          <span class="field-select__select-wrap">
+                            <select class="field-select__select">
+                              <option value="" selected>Все рубрики</option>
+                              <option value="">Рубрика 1</option>
+                              <option value="">Рубрика 2</option>
+                              <option value="">Рубрика 3</option>
+                            </select>
+                            <span class="small field-select__help-text"></span>
+                          </span>
+                        </label>
+                        <button type="submit" hidden>Отправить запрос</button>
+                      </form>
+
+                      <ul class="list-nostyled  vacancy-block__list vacancy-block__list--main">
+                        <li class="vacancy-block__item">
+                          <a href="#" class="vacancy-block__link">Экономист</a>
+                          <div><span class="vacancy-block__city">Дніпро</span> | <span class="vacancy-block__date">13.05.2020</span></div>
+                        </li>
+                        <li class="vacancy-block__item">
+                          <a href="#" class="vacancy-block__link">Экономист</a>
+                          <div><span class="vacancy-block__city">Гостомель</span> | <span class="vacancy-block__date">13.05.2020</span></div>
+                        </li>
+                        <li class="vacancy-block__item">
+                          <a href="#" class="vacancy-block__link">Логист транспортный</a>
+                          <div><span class="vacancy-block__city">Дніпро</span> | <span class="vacancy-block__date">13.05.2020</span></div>
+                        </li>
+                      </ul>
+
+                    </div>
+                  </div>
+
+                  <div class="vacancy-block__col-right">
+                    <div class="vacancy-block__inner  vacancy-block__actual">
+                      <h3 class="visually-hidden">Актуальные вакансии в нашей компании</h3>
+                      <p class="h5">В нашей компании сейчас размещены такие вакансии:</p>
+
+                      <ul class="list-nostyled  vacancy-block__list">
+                        <li class="vacancy-block__item">
+                          <a href="#" class="vacancy-block__link">Экономист</a>
+                          <div><span class="vacancy-block__city">Дніпро</span></div>
+                        </li>
+                        <li class="vacancy-block__item">
+                          <a href="#" class="vacancy-block__link">Экономист</a>
+                          <div><span class="vacancy-block__city">Гостомель</span></div>
+                        </li>
+                        <li class="vacancy-block__item">
+                          <a href="#" class="vacancy-block__link">Логист транспортный</a>
+                          <div><span class="vacancy-block__city">Дніпро</span></div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+
+              <section class="simple-contact-form">
+                <h2 class="visually-hidden">Форма заявки на вакансию</h2>
+
+                <div class="row">
+
+                  <div class="simple-contact-form__form-col">
+                    <div class="simple-contact-form__inner">
+
+                      <div class="simple-contact-form__header">
+                        <p class="h4">Подать заявку на вакансию</p>
+                        <span class="h5">Заполните форму:</span>
+                      </div>
+
+                      <form id="simple-contact" class="form" action="" method="post" enctype="multipart/form-data">
+                        <!-- Если надо загрузка файлов enctype="multipart/form-data" -->
+                        <label class="field-text">
+                          <span class="visually-hidden  field-text__name">Фамилия, Имя, Отчество</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" name="pib" value="" placeholder="ПІБ" required>
+                            <span class="field-text__help-text"></span>
+                          </span>
+                        </label>
+                        <label class="field-text">
+                          <span class="visually-hidden  field-text__name">Телефон</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input phone-mask" type="tel" name="tel" value="" placeholder="+380" required>
+                            <span class="field-text__help-text"></span>
+                          </span>
+                        </label>
+                        <label class="field-text">
+                          <span class="visually-hidden  field-text__name">E-mail</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="email" name="email" value="" placeholder="E-mail">
+                            <span class="field-text__help-text"></span>
+                          </span>
+                        </label>
+
+                        <div class="field-file">
+                          <!-- <div class="field-file__name">Загрузить резюме</div> -->
+                          <label class="field-file__input-wrap">
+                            <input class="field-file__input" type="file" data-multiple-caption="файлов выбрано: {count}">
+                            <div class="field-file__name-text" data-button-text="Загрузить резюме">Ничего не загружено</div>
+                            <div class="field-file__help-text"></div>
+                          </label>
+                        </div>
+
+                        <!-- <label class="field-text">
+                          <span class="visually-hidden  field-text__name">Сообщение</span>
+                          <span class="field-text__input-wrap">
+                            <textarea class="field-text__input" name="message" placeholder="Сообщение"></textarea>
+                            <span class="field-text__help-text"></span>
+                          </span>
+                        </label> -->
+
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input id="agreement" class="field-checkbox__input" type="checkbox" checked>
+                            <span class="field-checkbox__name-text">Я согласен на обработку персональных данных согласно <a href="#">Политике конфиденциальности</a></span>
+                          </label>
+                        </div>
+
+                        <div>
+                          <button class="btn  btn--xl  btn-submit" type="submit">
+                            <span class="btn__text">Отправить</span>
+                            <span class="btn__icon">
+                              <svg width="22" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-icon"></use></svg>
+                            </span>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="simple-contact-form__img-col">
+                    <div class="simple-contact-form__inner">
+                      <picture>
+                        <source data-srcset="img/form-img-big.webp" media="(min-width: 768px)" type="image/webp">
+                        <source data-srcset="img/form-img-big.jpg" media="(min-width: 768px)">
+                        <!-- 800x600 -->
+                        <source data-srcset="img/form-img-big.webp" media="(min-width: 480px)" type="image/webp">
+                        <source data-srcset="img/form-img-big.jpg" media="(min-width: 480px)">
+                        <!-- 600x450 -->
+                        <source data-srcset="img/form-img-big.webp" media="" type="image/webp">
+                        <img data-src="img/form-img-big.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Картинка" width="480" height="360">
+                      </picture>
+                    </div>
+                  </div>
+
+                </div>
+
+              </section>
+
+            </div>
+          </div>
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mmenu/mmenu.html')
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

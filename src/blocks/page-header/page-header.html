@@ -22,8 +22,25 @@
               </span>
             </button>
             <div class="dropdown-menu" aria-labelledby="view-order">
-              <div>
-                Контент
+              <div class="page-header__order-form">
+                <form id="search-form" action="" method="post">
+                  <div class="page-header__form-inner">
+                    <label class="field-text">
+                      <span class="field-text__name">Номер накладной:</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="XXXXXXXX" autofocus>
+                        <!-- <span class="field-text__help-text">Пояснение</span> -->
+                      </span>
+                    </label>
+                    <button class="btn  btn--only-icon-xl" type="submit">
+                      <span class="btn__text visually-hidden">Найти</span>
+                      <span class="btn__icon">
+                        <svg width="22" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-icon"></use></svg>
+                      </span>
+                    </button>
+                  </div>
+                </form>
+                <div class="page-header__order-report">Контент</div>
               </div>
             </div>
           </div>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  @@include('_include/page_head.html', {
+      "title": "Страница не найдена. 404",
+      "pageType": "p404"
+  })
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div id="page" class="page__inner  page__inner--404" style="background-image: url(./img/p404-bg.jpg)">
+
+    <div class="page__content">
+      <div class="page__header-wrapper  page__header-wrapper--no-index page__header-wrapper--404"><!-- добавить модификатор для неглавной --no-index -->
+        <!-- @@include('blocks/hero/hero.html') -->
+        @@include('blocks/main-nav/main-nav.html')
+        @@include('blocks/page-header/page-header.html', {
+            "pageType": ""
+        })
+        <!-- TODO: убрать "pageType": "index" не для главной -->
+      </div>
+
+      <main role="main">
+
+        <div class="container  page-404">
+          <div class="row">
+            <div class="page-404__col-num">
+              <span class="h1">404</span>
+            </div>
+            <div class="page-404__col-text">
+              <h1>This page does not exist...</h1>
+              <p>Perhaps you received a broken link, or you made a typo in the address bar. Try starting over in the main sections.</p>
+              <a href="index.html" class="btn  btn--xl  btn--banner">
+                <span class="btn__text">Back to Home</span>
+                <span class="btn__icon">
+                  <svg width="22" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-icon"></use></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html', {
+        "addStyle": "page-footer--404"
+      })
+    </div>
+
+  </div>
+
+  @@include('blocks/mmenu/mmenu.html')
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

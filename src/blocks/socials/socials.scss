@@ -1,0 +1,27 @@
+.socials {
+  display: flex;
+  align-items: center;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    line-height: 1;
+
+    & + & {
+      margin-left: 24px;
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    color: $white;
+
+    svg {
+      fill: currentColor;
+    }
+  }
+}

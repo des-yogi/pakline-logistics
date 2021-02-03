@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  @@include('_include/page_head.html', {
+      "title": "Контакты",
+      "pageType": "contacts"
+  })
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div id="page" class="page__inner">
+
+    <div class="page__content">
+      <div class="page__header-wrapper  page__header-wrapper--no-index"><!-- добавить модификатор для неглавной --no-index -->
+        <!-- @@include('blocks/hero/hero.html') -->
+        @@include('blocks/main-nav/main-nav.html')
+        @@include('blocks/page-header/page-header.html', {
+            "pageType": ""
+        })
+        <!-- TODO: убрать "pageType": "index" не для главной -->
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="breadcrumbs__wrapper">
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+          </div>
+        </div>
+      </div>
+
+      <main role="main">
+
+        <article class="container">
+          <div class="row">
+            <div class="page__regular-col">
+
+              <div class="row  titled-text-block  titled-text-block--contacts">
+                <div class="titled-text-block__header">
+                  <div class="titled-text-block__text">
+                    <h1>Контакты</h1>
+                  </div>
+                </div>
+                <!-- <div class="titled-text-block__body">
+                  <div class="titled-text-block__text">
+                    <p>Робота в PAKLINE GROUP – це робота в команді професіоналів, яка дозволяє співробітникам розвивати свої навички, отримувати новий досвід та домагатися кар’єрного зростання. Ми запрошуємо вас відкрити для себе нові можливості, які надихають саме Вас. Приєднуйтеся до нашої команди, яка прагне розвивати, навчати, підтримувати співробітників задля забезпечення стабільної якості сервісу, а також надає можливість для особистого та професійного розвитку.</p>
+                  </div>
+                </div> -->
+              </div>
+
+            </div>
+          </div>
+
+          <section class="index-contacts  index-contacts--contacts">
+            <div class="index-contacts__row">
+
+              <div class="index-contacts__header">
+                <h2>Складские комплексы и офисы</h2>
+                <p>Подберите себе удобный график работы</p>
+              </div>
+
+              <div class="index-contacts__tabs">
+                <div class="tabs">
+                  <div class="row">
+
+                    <div class="tabs__col-inner">
+                      <ul class="nav nav-tabs  tabs__links  invisible-scrollbar" id="addressTab" role="tablist">
+                        <li class="nav-item  tabs__link-wrap">
+                          <a class="nav-link  tabs__link active" id="name-01" data-toggle="tab" href="#tab-01" role="tab" aria-controls="tab-01" aria-selected="true">Складские комплексы</a>
+                        </li>
+                        <li class="nav-item  tabs__link-wrap">
+                          <a class="nav-link  tabs__link" id="name-02" data-toggle="tab" href="#tab-02" role="tab" aria-controls="tab-02" aria-selected="false">CDP Платформами</a>
+                        </li>
+                        <li class="nav-item  tabs__link-wrap">
+                          <a class="nav-link  tabs__link" id="name-03" data-toggle="tab" href="#tab-03" role="tab" aria-controls="tab-03" aria-selected="false">Офисы</a>
+                        </li>
+                      </ul>
+
+                      <div class="tab-content  tabs__content-wrapper" id="addressTabContent">
+                        <div class="tab-pane tabs__content-item fade show active" id="tab-01" role="tabpanel" aria-labelledby="name-01">
+                          <div class="tabs__content">
+                            <ul class="list-nostyled  tab-contacts">
+                              <li>
+                                <h5>г. Киев</h5>
+                                <p>просп. Степана Бандеры, 43</p>
+                                <h6>Режим работы:</h6>
+                                <p>
+                                  Пн–Пт - 09:00-22:00 <br>
+                                  Сб–Вс - 09:00-22:00
+                                </p>
+                                <h6>Телефоны:</h6>
+                                <p>
+                                  <a href="tel:+0800300353">0 (800) 300 353</a> <br>
+                                  <a href="tel:+0800300353">0 (800) 300 353</a>
+                                </p>
+                                <h6>Площадь:</h6>
+                                <p>
+                                  ?????????????? м<sup>2</sup>
+                                </p>
+                                <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вскоре послушавшись то курсивных повстречался?</p>
+                              </li>
+                              <li>
+                                <h5>г. Сумы</h5>
+                                <p>просп. Степана Бандеры, 43</p>
+                                <h6>Режим работы:</h6>
+                                <p>
+                                  Пн–Пт - 09:00-22:00 <br>
+                                  Сб–Вс - 09:00-22:00
+                                </p>
+                                <h6>Телефоны:</h6>
+                                <p>
+                                  <a href="tel:+0800300353">0 (800) 300 353</a> <br>
+                                  <a href="tel:+0800300353">0 (800) 300 353</a>
+                                </p>
+                                <h6>Площадь:</h6>
+                                <p>
+                                  ?????????????? м<sup>2</sup>
+                                </p>
+                                <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вскоре послушавшись то курсивных повстречался?</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="tab-pane tabs__content-item fade" id="tab-02" role="tabpanel" aria-labelledby="name-02">
+                          <div class="tabs__content">
+                            Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+                          </div>
+                        </div>
+                        <div class="tab-pane tabs__content-item fade" id="tab-03" role="tabpanel" aria-labelledby="name-03">
+                          <div class="tabs__content">
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="index-contacts__map">
+                <div id="map-container" class="map">
+                  <h3>Карта</h3>
+                  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="row">
+            <div class="page__regular-col">
+              <section class="client-card__wrapper">
+                <h2 class="visually-hidden">Прямая поддержка от наших партнеров</h2>
+                <p class="h5">По всем вопросам, касающимся доставок, обращайтесь напрямую к нам</p>
+                <div class="row" style="margin-bottom: -24px;">
+                  <div class="page__col-1-2-4">
+                    <div class="client-card">
+                      <div class="client-card__img">
+                        <img data-src="img/client-1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Клиент" width="387" height="160">
+                      </div>
+                      <div class="client-card__text">
+                        <h3 class="visually-hidden">Название клиента</h3>
+                        <span>Тел.: <a href="tel:+0800503503">0 (800) 503 503</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="page__col-1-2-4">
+                    <div class="client-card">
+                      <div class="client-card__img">
+                        <img data-src="img/client-2.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Клиент" width="387" height="160">
+                      </div>
+                      <div class="client-card__text">
+                        <h3 class="visually-hidden">Название клиента</h3>
+                        <span>Тел.: <a href="tel:+0800503503">0 (800) 503 503</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="page__col-1-2-4">
+                    <div class="client-card">
+                      <div class="client-card__img">
+                        <img data-src="img/client-3.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Клиент" width="387" height="160">
+                      </div>
+                      <div class="client-card__text">
+                        <h3 class="visually-hidden">Название клиента</h3>
+                        <span>Тел.: <a href="tel:+0800503503">0 (800) 503 503</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="page__col-1-2-4">
+                    <div class="client-card">
+                      <div class="client-card__img">
+                        <img data-src="img/client-4.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Клиент" width="387" height="160">
+                      </div>
+                      <div class="client-card__text">
+                        <h3 class="visually-hidden">Название клиента</h3>
+                        <span>Тел.: <a href="tel:+0800503503">0 (800) 503 503</a></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+        </article>
+
+      </main>
+
+      <section class="container  big-contact-form">
+        <div class="row">
+
+          <div class="big-contact-form__col-text">
+            <div class="big-contact-form__text">
+              <h2 class="big-contact-form__title">Связаться с нами</h2>
+              <span class="big-contact-form__descr">Запросите информацию о статусе выполнения ваших заказов</span>
+
+              <div class="big-contact-form__form-wrapper">
+                <form id="" class="big-contact-form__form" action="" method="post">
+                  <div class="row">
+                    <div class="big-contact-form__col">
+                      <fieldset>
+                        <legend class="h5">Аутсорсинг логистических услуг</legend>
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" name="" value="">
+                            <span class="field-checkbox__name-text">Складские услуги</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" name="" value="">
+                            <span class="field-checkbox__name-text">Адресная доставка</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" name="" value="">
+                            <span class="field-checkbox__name-text">Транспортные услуги</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" name="" value="">
+                            <span class="field-checkbox__name-text">Холодная логистика</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" name="" value="">
+                            <span class="field-checkbox__name-text">Система менеджмента качества</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" name="" value="">
+                            <span class="field-checkbox__name-text">Возвратная логистика и поддержка после продажного обслуживания</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" name="" value="">
+                            <span class="field-checkbox__name-text">Упаковка, сортировка. Дополнительные услуги</span>
+                          </label>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <div class="big-contact-form__col">
+                      <fieldset>
+                        <legend class="h5">Заполните форму<span class="visually-hidden"> с вашими контактными данными</span>:</legend>
+                        <label class="field-text">
+                          <span class="visually-hidden  field-text__name">Фамилия, Имя, Отчество</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" name="pib" value="" placeholder="ПІБ" required>
+                            <span class="field-text__help-text"></span>
+                          </span>
+                        </label>
+                        <label class="field-text">
+                          <span class="visually-hidden  field-text__name">E-mail</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="email" name="email" value="" placeholder="E-mail" required>
+                            <span class="field-text__help-text"></span>
+                          </span>
+                        </label>
+                        <label class="field-text">
+                          <span class="visually-hidden  field-text__name">Телефон</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input phone-mask" type="tel" name="tel" value="" placeholder="+380">
+                            <span class="field-text__help-text"></span>
+                          </span>
+                        </label>
+                        <label class="field-text">
+                          <span class="visually-hidden  field-text__name">Сообщение</span>
+                          <span class="field-text__input-wrap">
+                            <textarea class="field-text__input" name="message" placeholder="Сообщение"></textarea>
+                            <span class="field-text__help-text"></span>
+                          </span>
+                        </label>
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input id="agreement" class="field-checkbox__input" type="checkbox" checked>
+                            <span class="field-checkbox__name-text">Я согласен на обработку персональных данных согласно <a href="#">Политике конфиденциальности</a></span>
+                          </label>
+                        </div>
+                      </fieldset>
+                      <div style="margin-top: 32px;">
+                        <button class="btn  btn--xl  btn-submit" type="submit">
+                          <span class="btn__text">Отправить</span>
+                          <span class="btn__icon">
+                            <svg width="22" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-icon"></use></svg>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="big-contact-form__col-img">
+            <div class="row">
+              <div class="big-contact-form__img-inner-col">
+                <div class="embed-responsive embed-responsive--4-3  big-contact-form__img">
+                  <picture>
+                    <source data-srcset="img/form-img-2x-01.webp" media="(min-width: 1440px)" type="image/webp">
+                    <source data-srcset="img/form-img-2x-01.jpg" media="(min-width: 1440px)">
+                    <!-- 360x270 -->
+                    <source data-srcset="img/form-img-2x-01.webp" media="(min-width: 480px)" type="image/webp">
+                    <source data-srcset="img/form-img-2x-01.jpg" media="(min-width: 480px)">
+                    <!-- 600x450 -->
+                    <source data-srcset="img/form-img-2x-01.webp" type="image/webp">
+                    <img data-src="img/form-img-2x-01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Картинка" width="480" height="360">
+                  </picture>
+                </div>
+              </div>
+              <div class="big-contact-form__img-inner-col">
+                <div class="embed-responsive embed-responsive--4-3  big-contact-form__img">
+                  <picture>
+                    <source data-srcset="img/form-img-2x-02.webp" media="(min-width: 1440px)" type="image/webp">
+                    <source data-srcset="img/form-img-2x-02.jpg" media="(min-width: 1440px)">
+                    <!-- 360x270 -->
+                    <source data-srcset="img/form-img-2x-02.webp" media="(min-width: 480px)" type="image/webp">
+                    <source data-srcset="img/form-img-2x-02.jpg" media="(min-width: 480px)">
+                    <!-- 600x450 -->
+                    <source data-srcset="img/form-img-2x-02.webp" type="image/webp">
+                    <img data-src="img/form-img-2x-02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Картинка" width="480" height="360">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <div class="page__footer-wrapper" style="padding-top: 0;">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mmenu/mmenu.html')
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
