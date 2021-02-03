@@ -239,7 +239,7 @@ a.btn--disabled{
 .btn--only-icon{
     padding:4px !important; }
 .btn--only-icon-xl{
-    padding:12px !important; }
+    padding:11px !important; }
 .btn--banner{
     background-color:rgba(255, 255, 255, 0.1);
     border-color:rgba(255, 255, 255, 0.15);
@@ -552,7 +552,7 @@ a.btn--disabled{
       display:none; }
 .lang-switcher .dropdown-menu{
     top:22px !important;
-    min-width:55px;
+    min-width:60px;
     width:100%;
     border-top-left-radius:0;
     border-top-right-radius:0;
@@ -4186,8 +4186,9 @@ input:checked ~ .field-checkbox__name-text::after{
 .field-file__name{
     display:block;
     margin-bottom:0.4em;
-    line-height:1.45;
-    font-weight:700; }
+    font-size:14px;
+    font-weight:500;
+    line-height:1.45; }
 .field-file__input-wrap{
     display:block;
     position:relative; }
@@ -4275,8 +4276,9 @@ input:checked ~ .field-checkbox__name-text::after{
 .field-select__name{
     display:block;
     margin-bottom:0.4em;
-    line-height:1.45;
-    font-weight:700; }
+    font-size:14px;
+    font-weight:500;
+    line-height:1.45; }
 .field-select__input-wrap{
     display:block; }
 .field-select__select{
@@ -4326,8 +4328,9 @@ input:checked ~ .field-checkbox__name-text::after{
 .field-text__name{
     display:block;
     margin-bottom:0.4em;
-    line-height:1.45;
-    font-weight:700; }
+    font-size:14px;
+    font-weight:500;
+    line-height:1.45; }
 .field-text__input-wrap{
     display:block; }
 .field-text__input{
