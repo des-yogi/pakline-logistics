@@ -1,0 +1,63 @@
+.banner {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  margin: 92px 0;
+  color: $white;
+  background-color: $main-color;
+
+  @media (min-width: $screen-md) {
+    margin: 128px 0;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__text-col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 7);
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 240px;
+      object-fit: contain;
+      object-position: center;
+
+      @media (min-width: $screen-md) {
+        max-width: 340px;
+      }
+
+      @media (min-width: $screen-xl) {
+        max-width: 490px;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    & + * {
+      margin-top: 0;
+    }
+  }
+}

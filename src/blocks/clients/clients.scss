@@ -1,0 +1,75 @@
+.clients {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 42px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+
+      & + * {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__list {
+    position: relative;
+    padding-left: 0;
+    margin-top: 0;
+    list-style: none;
+    overflow-y: hidden;
+
+    @media (max-width: $screen-md - 1) {
+      height: 1000px;
+      will-change: auto;
+    }
+
+    &::after {
+
+      @media (max-width: $screen-md - 1) {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 120px;
+        background: linear-gradient(360deg, #F4F5F7, rgba(255, 255, 255, 0) 100%);
+      }
+    }
+
+    &--show {
+      overflow-y: none;
+
+      &::after {
+        display: none !important;
+      }
+    }
+  }
+
+  &__item {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 6);
+    @include col(xl, 4);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__btn-wrapper {
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+}

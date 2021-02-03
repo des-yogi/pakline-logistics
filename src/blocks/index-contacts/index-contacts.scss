@@ -1,0 +1,74 @@
+.index-contacts {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    @include row(
+      $xs-grid-gutter:  28px,
+      $sm-grid-gutter:  28px,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width,
+      $xxl-grid-gutter: $grid-gutter-width
+    );
+  }
+
+  &__header {
+    @include col(xs, 12, $grid-columns, 28px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 12);
+    margin-bottom: 32px;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+
+      & + p {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__tabs {
+    @include col(xs, 12, $grid-columns, 28px);
+    @include col(md, 12);
+    @include col(xl, 5);
+    margin-bottom: 16px;
+    background-color: $white;
+
+    @media (min-width: $screen-md) {
+      background-color: transparent;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__map {
+    @include col(xs, 12, $grid-columns, 28px);
+    @include col(md, 12);
+    @include col(xl, 7);
+    height: 320px;
+    background-color: $white;
+
+    @media (min-width: $screen-md) {
+      height: 460px;
+      background-color: transparent;
+    }
+
+    @media (min-width: $screen-xl) {
+      height: auto;
+    }
+  }
+
+  &--contacts {
+    margin-bottom: 80px;
+
+    @media (min-width: $screen-xl) {
+      padding: 0 16px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.text-page-header {
+
+  @media (min-width: $screen-xl) {
+    padding: 0 16px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+
+    @media (max-width: $screen-xl - 1) {
+      font-size: 34px;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  @@include('_include/page_head.html', {
+      "title": "Про нас",
+      "pageType": "about"
+  })
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div id="page" class="page__inner">
+
+    <div class="page__content">
+      <div class="page__header-wrapper  page__header-wrapper--no-index"><!-- добавить модификатор для неглавной --no-index -->
+        <!-- @@include('blocks/hero/hero.html') -->
+        @@include('blocks/main-nav/main-nav.html')
+        @@include('blocks/page-header/page-header.html', {
+            "pageType": ""
+        })
+        <!-- TODO: убрать "pageType": "index" не для главной -->
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="breadcrumbs__wrapper">
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+          </div>
+        </div>
+      </div>
+
+      <main role="main">
+
+        <article class="container">
+          <div class="row">
+            <div class="page__regular-col">
+
+              <div class="row  titled-text-block">
+                <div class="titled-text-block__header">
+                  <div class="titled-text-block__text">
+                    <h1>О нас</h1>
+                  </div>
+                </div>
+                <div class="titled-text-block__body">
+                  <div class="titled-text-block__text">
+                    <p>Компания ООО «КОРСА» более 10 лет является одним из ведущих игроков на рынке логистических услуг, выступая в качестве 3PL оператора. Большой опыт в логистике компании основывается на взаимовыгодном партнерстве и гарантирует бесперебойное обслуживание клиентов.  С 2017 года ООО «КОРСА» и ее торговая марка PAKLINE Logistics входит в группу компаний PAKLINE.</p>
+                  </div>
+                </div>
+              </div>
+
+              <section class="media-block"><!-- media-block--reversed -->
+                <div class="row">
+                  <div class="media-block__text-col">
+                    <div class="media-block__text">
+                      <h2 class="media-block__title">Наш многолетний опыт</h2>
+                      <p>Компания постоянно совершенствует технологические процессы и предлагает заказчикам интегрированные логистические модели обслуживания с индивидуальными решениями для каждого клиента, включая аутсорсинг в направлениях складской и транспортной логистики.</p>
+                    </div>
+                  </div>
+                  <div class="media-block__img-col">
+                    <div class="media-block__img">
+                      <div class="embed-responsive embed-responsive--3-2">
+                        <picture>
+                          <source data-srcset="img/media-block-3x2.webp" media="(min-width: 768px)" type="image/webp">
+                          <source data-srcset="img/media-block-3x2.jpg" media="(min-width: 768px)">
+                            <!-- 800x533 -->
+                          <source data-srcset="img/media-block-3x2.webp" media="(min-width: 480px)" type="image/webp">
+                          <source data-srcset="img/media-block-3x2.jpg" media="(min-width: 480px)">
+                            <!-- 600x400 -->
+                          <source data-srcset="img/media-block-3x2.webp" type="image/webp">
+                          <img class="b-lazy" data-src="img/media-block-3x2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Картинка" width="480" height="320">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              @@include('blocks/decorated-list/decorated-list.html', {
+                  "title": "Наши услуги включают:"
+              })
+
+              <section class="media-block  media-block--reversed "><!-- media-block--reversed -->
+                <div class="row">
+                  <div class="media-block__text-col">
+                    <div class="media-block__text">
+                      <h2 class="media-block__title">Доверьте свой бизнес команде профессионалов</h2>
+                      <p>Компания постоянно совершенствует технологические процессы и предлагает заказчикам интегрированные логистические модели обслуживания с индивидуальными решениями для каждого клиента, включая аутсорсинг в направлениях складской и транспортной логистики.</p>
+                    </div>
+                  </div>
+                  <div class="media-block__img-col">
+                    <div class="media-block__img">
+                      <div class="embed-responsive embed-responsive--3-2">
+                        <picture>
+                          <source data-srcset="img/media-block-3x2.webp" media="(min-width: 768px)" type="image/webp">
+                          <source data-srcset="img/media-block-3x2.jpg" media="(min-width: 768px)">
+                            <!-- 800x533 -->
+                          <source data-srcset="img/media-block-3x2.webp" media="(min-width: 480px)" type="image/webp">
+                          <source data-srcset="img/media-block-3x2.jpg" media="(min-width: 480px)">
+                            <!-- 600x400 -->
+                          <source data-srcset="img/media-block-3x2.webp" type="image/webp">
+                          <img class="b-lazy" data-src="img/media-block-3x2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Картинка" width="480" height="320">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <div class="row  titled-text-block" style="margin-bottom: 0;">
+                <div class="titled-text-block__header">
+                  <div class="titled-text-block__text">
+                    <h2>Наша компания адаптируется к потребностям вашего бизнеса</h2>
+                  </div>
+                </div>
+                <div class="titled-text-block__body">
+                  <div class="titled-text-block__text">
+                    <p>Акцент на клиентоориентированность, огромный опыт реализации нестандартных решений, серьезное ресурсное обеспечение, гибкая инфраструктура и высококвалифицированный и мотивированный персонал – залог нашей надежности в выполнении ваших бизнес-задач на уровне, соответствующем запросам лидеров рынка в своих категориях.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mmenu/mmenu.html')
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

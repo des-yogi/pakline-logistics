@@ -1,0 +1,53 @@
+.decorated-list {
+  margin: 104px 0 56px;
+
+  @media (min-width: $screen-md) {
+    margin: 132px 0 82px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 0 16px;
+    margin: 168px 0 144px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 6);
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__list {
+    padding-left: 0;
+    margin-top: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    padding: 24px 0 16px;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background-size: 104%;
+      background-position: left center;
+      background-image: repeating-linear-gradient(-29deg,
+      $text-color,
+      $text-color 2.1px,
+      transparent 2.1px,
+      transparent 7.7px);
+    }
+  }
+}

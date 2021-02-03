@@ -1,0 +1,36 @@
+.tab-contacts {
+
+  $block-name:                &; // #{$block-name}__element
+
+  h5,
+  h6,
+  .h5,
+  .h6 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    margin-top: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  li:not(:last-child) {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid $divider-color;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+    }
+  }
+}

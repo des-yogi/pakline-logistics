@@ -1,0 +1,58 @@
+.titled-text-block {
+  margin-bottom: 112px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 140px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 152px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
+    margin-top: 0;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &__header {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 12);
+    @include col(xl, 4);
+  }
+
+  &__body {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col(md, 12);
+    @include col(xl, 8);
+  }
+
+  &__text {
+    font-size: 18px;
+
+    @media (min-width: $screen-xl) {
+      padding: 0 16px;
+    }
+  }
+
+  &--contacts {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 64px;
+    }
+  }
+}

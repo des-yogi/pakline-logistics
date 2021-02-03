@@ -1,0 +1,30 @@
+.page-404 {
+  color: $white;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col-num {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 2);
+    margin-bottom: 24px;
+
+    span {
+      font-size: $font-size--display;
+    }
+  }
+
+  &__col-text {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 10);
+
+    p {
+      margin-bottom: 32px;
+    }
+  }
+}

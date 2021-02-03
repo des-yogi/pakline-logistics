@@ -1,0 +1,25 @@
+.index-intro {
+  margin-bottom: 128px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 160px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 14px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 7);
+  }
+
+  &__title {
+    margin: 0 auto 8px;
+  }
+
+  &__subtitle {
+    margin: 0 auto 16px;
+  }
+}
