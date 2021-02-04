@@ -47,7 +47,24 @@
     position: relative;
     padding: 24px 0 16px;
 
-    &::before {
+    // &::before {
+    //   display: block;
+    //   content: "";
+    //   position: absolute;
+    //   top: -2px;
+    //   left: 0;
+    //   right: 0;
+    //   height: 4px;
+    //   background-size: 104%;
+    //   background-position: left center;
+    //   background-image: repeating-linear-gradient(-29deg,
+    //   $text-color,
+    //   $text-color 2.1px,
+    //   transparent 2.1px,
+    //   transparent 7.7px);
+    // }
+
+    &::after {
       display: block;
       content: "";
       position: absolute;
@@ -55,13 +72,7 @@
       left: 0;
       right: 0;
       height: 4px;
-      background-size: 104%;
-      background-position: left center;
-      background-image: repeating-linear-gradient(-29deg,
-      $text-color,
-      $text-color 2.1px,
-      transparent 2.1px,
-      transparent 7.7px);
+      background-repeat: repeat-x;
     }
   }
 }

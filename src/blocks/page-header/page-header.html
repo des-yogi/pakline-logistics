@@ -24,23 +24,54 @@
             <div class="dropdown-menu" aria-labelledby="view-order">
               <div class="page-header__order-form">
                 <form id="search-form" action="" method="post">
+
                   <div class="page-header__form-inner">
+
                     <label class="field-text">
-                      <span class="field-text__name">Номер накладной:</span>
+                      <span class="field-text__name">№ накладной:</span>
                       <span class="field-text__input-wrap">
                         <input class="field-text__input" type="text" placeholder="XXXXXXXX" autofocus>
-                        <!-- <span class="field-text__help-text">Пояснение</span> -->
                       </span>
                     </label>
+
                     <button class="btn  btn--only-icon-xl" type="submit">
                       <span class="btn__text visually-hidden">Найти</span>
                       <span class="btn__icon">
                         <svg width="22" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-icon"></use></svg>
                       </span>
                     </button>
+
                   </div>
                 </form>
-                <div class="page-header__order-report">Контент</div>
+                <!--
+                Сценарий использования:
+                1. При открытии меню "Поиск накладной" контейнеры
+                "page-header__order-loading" и "page-header__order-status" скрыты.
+                2. При заполнении и отправки формы поиска контейнер "page-header__order-loading" убираем стиль "display:none"...
+                Показываеся иконка лоадера и подпись "Идет загрузка…"
+                3. После получения ответа от сервера в зависимости от статуса:
+                  * Статус "Успех - Накладная найдена"
+                  а) Контейнеру "page-header__order-loading" добавляем стиль "display:none"
+                  б) У контейнера "page-header__order-status" убираем стиль "display:none"
+                  в) В спан с id="report" записываем ответ сервера
+                  * Статус "Ошибка - Накладная НЕ найдена или иная ошибка"
+                  а) Пункты А и Б из предыдущего сценария, НО дополнительно добавляем
+                  новый класс-модификатор контейнеру "page-header__order-status", т.е.
+                  получим "page-header__order-status page-header__order-status--error"
+                  б) В спан с id="report" записываем "Нет данных"
+                -->
+                <div class="page-header__order-report">
+                  <div class="page-header__order-loading" style="display:none">
+                    <span class="loader"></span>
+                    <span>Идет загрузка…</span>
+                  </div>
+                  <div class="page-header__order-status" style="display:none">
+                    <!-- page-header__order-status--error -->
+                    <span class="status-icon"></span>
+                    <span style="margin-right:0.5em">Статус:</span>
+                    <span id="report" style="color:#08a5e0;font-weight:bolder">12345</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
