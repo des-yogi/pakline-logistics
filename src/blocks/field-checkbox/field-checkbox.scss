@@ -42,8 +42,8 @@ $line-height:                 1.375em !default;
       left: 0;
       width: 20px;
       height: 20px;
-      border: 1px solid $border-color;
-      border-radius: 3px;
+      border: 2px solid $black;
+      border-radius: 2px;
     }
 
     @at-root input:hover ~ &::before {
@@ -56,15 +56,15 @@ $line-height:                 1.375em !default;
     }
 
     @at-root input:checked ~ &::before {
-      background-color: $text-color;
-      border-color: $text-color;
+      background-color: $black;
+      border-color: $black;
     }
 
     &::after {
       content: '';
       position: absolute;
       z-index: 1;
-      top: -1.5px;
+      top: -2px;
       left: 0;
       width: 20px;
       height: 20px;
