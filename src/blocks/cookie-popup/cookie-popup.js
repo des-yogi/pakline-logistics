@@ -2,22 +2,29 @@
   if (!window.cookieconsent) {
     return;
   }
+
+  let position;
+  if (isMobile.any) {
+    position = 'bottom';
+  } else {
+    position = 'bottom-left';
+  }
+
   window.cookieconsent.initialise({
     "palette": {
       "popup": {
-        "background": "#ffffff",
-        "text": "#020406"
+        "background": "#1d1d1b"
       },
       "button": {
-        "background": "#1870b7",
-        "text": "#ffffff"
+        "background": "#343432"
       }
     },
-    "position": "bottom-right",
+    "showLink": false,
+    "theme": "classic",
+    "position": position,
     "content": {
-      "message": "Этот сайт использует файлы cookie в соответствии с <a href='https://www.cookiesandyou.com/'>Политикой использования файлов cookie</a>. Если Вы согласны на использование нами файлов cookie, то нажмите кнопку «Принять».",
-      "dismiss": "Принять!",
-      "link": "Подробнее"
+      "message": "<p style='margin-bottom:8px;font-weight:500'>Мы используем файлы cookie, чтобы Вам было удобнее пользоваться нашим сайтом.</p><p style='font-size:14px;margin-top:0'>Продолжая просматривать, вы соглашаетесь на использование файлов cookie. Более подробную информацию вы можете получить в нашей <a href='#'>Политике конфиденциальности</a>, а также в <a href='#'>Условиях и положениях</a>.</p>",
+      "dismiss": "Принять"
     }
   });
 })();

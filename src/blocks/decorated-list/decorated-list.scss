@@ -68,11 +68,15 @@
       display: block;
       content: "";
       position: absolute;
-      top: -2px;
+      top: 0;
       left: 0;
       right: 0;
+      width: 150px;
       height: 4px;
       background-repeat: repeat-x;
+      background-position: left center;
+      background-size: 14px 4px;
+      background-image: url(../img/outflow-bg.svg);
     }
   }
 }
