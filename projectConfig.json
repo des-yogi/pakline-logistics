@@ -67,6 +67,7 @@
   ],
   "singleCompiled": [],
   "addJsBefore": [
+    "./node_modules/cookieconsent/build/cookieconsent.min.js",
     "./node_modules/swiper/swiper-bundle.min.js",
     "./node_modules/mmenu-js/dist/mmenu.polyfills.js",
     "./node_modules/mmenu-js/dist/mmenu.js",
