@@ -40,9 +40,10 @@
     top: 22px !important;
     min-width: 60px;
     width: 100%;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    //border-top-left-radius: 0;
+    //border-top-right-radius: 0;
     border: none;
+    border-radius: 0;
 
     @media (min-width: $screen-md) {
       top: 29px !important;
