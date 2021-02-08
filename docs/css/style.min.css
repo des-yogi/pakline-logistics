@@ -554,9 +554,8 @@ a.btn--disabled{
     top:22px !important;
     min-width:60px;
     width:100%;
-    border-top-left-radius:0;
-    border-top-right-radius:0;
-    border:none; }
+    border:none;
+    border-radius:0; }
 .lang-switcher .dropdown-item{
     font-family:"Graphik", "Segoe UI", "Roboto", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
     font-size:16px;
@@ -1235,7 +1234,8 @@ a[href^="tel:"]{ }
     top:21px !important;
     left:5px !important;
     min-width:320px;
-    padding:24px 14px; }
+    padding:24px 14px;
+    border-radius:0; }
 .page-header__order-btn{
     -webkit-box-sizing:border-box;
             box-sizing:border-box;
@@ -4195,8 +4195,8 @@ body.modal-open .mm-slideout{
     left:0;
     width:20px;
     height:20px;
-    border:1px solid #737f8b;
-    border-radius:3px; }
+    border:2px solid black;
+    border-radius:2px; }
 input:hover ~ .field-checkbox__name-text::before{
     border-color:#1d1d1b; }
 input:focus ~ .field-checkbox__name-text::before{
@@ -4205,13 +4205,13 @@ input:focus ~ .field-checkbox__name-text::before{
             box-shadow:0 0 0 2px rgba(8, 165, 224, 0.65);
     border-color:#1d1d1b; }
 input:checked ~ .field-checkbox__name-text::before{
-    background-color:#1d1d1b;
-    border-color:#1d1d1b; }
+    background-color:black;
+    border-color:black; }
 .field-checkbox__name-text::after{
     content:'';
     position:absolute;
     z-index:1;
-    top:-1.5px;
+    top:-2px;
     left:0;
     width:20px;
     height:20px;
