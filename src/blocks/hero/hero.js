@@ -12,5 +12,10 @@
       nextEl: '.hero__next',
       prevEl: '.hero__prev',
     },
+
+    a11y: {
+      prevSlideMessage: 'Попередній слайд',
+      nextSlideMessage: 'Наступний слайд',
+    },
   })
 }());

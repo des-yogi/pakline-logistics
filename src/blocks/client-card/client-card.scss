@@ -1,10 +1,17 @@
 .client-card {
+  display: block;
   height: 100%;
   background-color: $white;
+  color: $text-color;
   border-radius: 16px;
   overflow: hidden;
 
   $block-name:                &; // #{$block-name}__element
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 
   &__wrapper {
     margin-bottom: 64px;
@@ -37,7 +44,7 @@
     font-size: 14px;
     text-align: center;
 
-    a {
+    a:not(.btn) {
       display: inline-block;
       vertical-align: baseline;
       transition: color 0.2s ease;
