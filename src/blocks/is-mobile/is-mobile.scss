@@ -1,20 +1,16 @@
-// В этом файле должны быть стили для БЭМ-блока is-mobile, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+// .is-mobile {
 
-.is-mobile {
+//   &--android-device {}
 
-  &--android-device {}
+//   &--apple-device {}
 
-  &--apple-device {}
+//   &--amazon-device {}
 
-  &--amazon-device {}
+//   &--windows-device {}
 
-  &--windows-device {}
+//   &--phone {}
 
-  &--phone {}
+//   &--tablet {}
 
-  &--tablet {}
-
-  &--seven_inch {}
-}
+//   &--seven_inch {}
+// }

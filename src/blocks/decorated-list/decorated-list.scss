@@ -1,82 +1,97 @@
-.decorated-list {
-  margin: 104px 0 56px;
+.block {
 
-  @media (min-width: $screen-md) {
-    margin: 132px 0 82px;
-  }
+  &__row {
+    @include row(
+      $xs-grid-gutter:  14px,
+      $sm-grid-gutter:  14px,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width,
+      $xxl-grid-gutter: $grid-gutter-width
+    );
 
-  @media (min-width: $screen-xl) {
-    padding: 0 16px;
-    margin: 168px 0 144px;
-  }
-
-  $block-name:                &; // #{$block-name}__element
-
-  &__col {
-    @include col(xs, 12, $grid-columns, 14px);
-    @include col(md, 6);
-    margin-bottom: 24px;
-
-    &:nth-child(odd) {
-
-      @media (min-width: $screen-xl) {
-        padding-right: 32px;
-      }
-    }
-
-    &:nth-child(even) {
-
-      @media (min-width: $screen-xl) {
-        padding-left: 32px;
-      }
+    & > div {
+      @include col(xs, 12, $grid-columns, 14px);
+      @include col(md, 12);
+      @include col(xl, 6);
     }
   }
 
-  &__title {
-    margin: 0;
+  ul {
+  padding-left: 0;
+  margin-top: 0;
+  list-style: none;
+  @include row(
+    $xs-grid-gutter:  14px,
+    $sm-grid-gutter:  14px,
+    $md-grid-gutter:  $grid-gutter-width,
+    $lg-grid-gutter:  $grid-gutter-width,
+    $xl-grid-gutter:  $grid-gutter-width,
+    $xxl-grid-gutter: $grid-gutter-width
+  );
+
+  @media (min-width: $screen-xl) {}
+
+    li {
+      position: relative;
+      @include col(xs, 12, $grid-columns, 14px);
+      @include col(md, 6);
+      padding-top: 24px;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+
+      &:nth-child(odd) {
+
+        @media (min-width: $screen-xl) {
+          padding-right: 32px;
+        }
+      }
+
+      &:nth-child(even) {
+
+        @media (min-width: $screen-xl) {
+          padding-left: 32px;
+        }
+
+        &::after {
+
+          @media (min-width: $screen-xl) {
+            left: 32px;
+          }
+        }
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 10px;
+        right: 0;
+        width: 150px;
+        height: 4px;
+        background-repeat: repeat-x;
+        background-position: left center;
+        background-size: 14px 4px;
+        background-image: url(../img/outflow-bg.svg);
+
+        @media (min-width: $screen-md) {
+          left: 16px;
+        }
+      }
+    }
   }
 
-  &__list {
-    padding-left: 0;
-    margin-top: 0;
-    list-style: none;
-  }
+  &--with-margin {
+    margin: 104px 0 56px;
 
-  &__item {
-    display: block;
-    position: relative;
-    padding: 24px 0 16px;
+    @media (min-width: $screen-md) {
+      margin: 132px 0 82px;
+    }
 
-    // &::before {
-    //   display: block;
-    //   content: "";
-    //   position: absolute;
-    //   top: -2px;
-    //   left: 0;
-    //   right: 0;
-    //   height: 4px;
-    //   background-size: 104%;
-    //   background-position: left center;
-    //   background-image: repeating-linear-gradient(-29deg,
-    //   $text-color,
-    //   $text-color 2.1px,
-    //   transparent 2.1px,
-    //   transparent 7.7px);
-    // }
-
-    &::after {
-      display: block;
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 150px;
-      height: 4px;
-      background-repeat: repeat-x;
-      background-position: left center;
-      background-size: 14px 4px;
-      background-image: url(../img/outflow-bg.svg);
+    @media (min-width: $screen-xl) {
+      padding: 0 16px;
+      margin: 168px 0 144px;
     }
   }
 }

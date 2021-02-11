@@ -55,7 +55,8 @@
     "vacancy-block": [],
     "partners-list": [],
     "media-link": [],
-    "media-link-card": []
+    "media-link-card": [],
+    "faq": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

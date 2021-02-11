@@ -50,6 +50,16 @@
 
     color: white;
 
+    @media (min-width: $screen-xs) and (max-width: $screen-md - 1) and (orientation: landscape) {
+      bottom: 20px;
+    }
+
+    @media (min-width: $screen-md) and (max-width: 840px) and (orientation: landscape) {
+      bottom: 20px;
+      left: 28px;
+      right: 28px;
+    }
+
     @media (min-width: $screen-md) {
       top: 132px;
       bottom: 60px;
@@ -59,7 +69,7 @@
 
     @media (min-width: $screen-xl) {
       bottom: 104px;
-      $padding-min: 108px; // нужный отступ от краев экрана
+      $padding-min: 28px; // нужный отступ от краев экрана
       $half-screen-xl: $screen-xl / 2 - $padding-min;
       // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
       left: calc(50% - #{$half-screen-xl});
@@ -129,6 +139,10 @@
 
     color: white;
 
+    @media (max-width: 840px) and (orientation: landscape) {
+      bottom: 20px;
+    }
+
     @media (min-width: $screen-md) {
       top: 130px;
       bottom: 64px;
@@ -138,7 +152,7 @@
 
     @media (min-width: $screen-xl) {
       bottom: 108px;
-      $padding-min: 108px; // нужный отступ от краев экрана
+      $padding-min: 28px; // нужный отступ от краев экрана
       $half-screen-xl: $screen-xl / 2 - $padding-min;
       // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
       left: calc(50% - #{$half-screen-xl});

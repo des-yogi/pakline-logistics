@@ -93,6 +93,21 @@
       border-color: $main-color;
     }
 
+    @media (min-width: $screen-xs) and (max-width: $screen-md - 1) {
+      padding: 11px;
+    }
+
+    #{$block-name}__text {
+
+      @media (min-width: $screen-xs) and (max-width: $screen-md - 1) {
+        display: none;
+      }
+
+      @media (min-width: $screen-xs) and (max-width: 840px) and (orientation: landscape) {
+        display: none;
+      }
+    }
+
     &--disabled,
     &:disabled {
       color: $text-muted;

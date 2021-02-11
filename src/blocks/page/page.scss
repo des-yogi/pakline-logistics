@@ -290,27 +290,6 @@ a {
 }
 
 // BS4 Хелперы для BS4 табов и т.п.
-/* .fade {
-  transition: opacity 0.15s linear;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade {
-    transition: none;
-  }
-}
-
-.fade:not(.show) {
-  opacity: 0;
-}
-
-.collapse {
-  transition: all 0.3s ease-out;
-}
-
-.collapse:not(.show) {
-  display: none;
-} */
 
 .fade {
   @include transition($transition-fade);
