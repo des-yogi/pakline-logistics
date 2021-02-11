@@ -6,3 +6,5 @@
 * https://des-yogi.github.io/pakline-logistics/text-page.html
 * https://des-yogi.github.io/pakline-logistics/text-page-form-inside.html
 * https://des-yogi.github.io/pakline-logistics/page-404.html
+* https://des-yogi.github.io/pakline-logistics/faq.html
+* https://des-yogi.github.io/pakline-logistics/client-page.html
