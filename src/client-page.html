@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  @@include('_include/page_head.html', {
+      "title": "Клиент",
+      "pageType": ""
+  })
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div id="page" class="page__inner">
+
+    <div class="page__content">
+      <div class="page__header-wrapper  page__header-wrapper--no-index"><!-- добавить модификатор для неглавной --no-index -->
+        <!-- @@include('blocks/hero/hero.html') -->
+        @@include('blocks/main-nav/main-nav.html')
+        @@include('blocks/page-header/page-header.html', {
+            "pageType": ""
+        })
+        <!-- TODO: убрать "pageType": "index" не для главной -->
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="breadcrumbs__wrapper">
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+          </div>
+        </div>
+      </div>
+
+      <main role="main">
+
+        <article class="container">
+          <div class="row">
+            <div class="page__regular-col">
+
+              <div class="row  titled-text-block" style="margin-bottom: 0;">
+                <div class="titled-text-block__header"  style="margin-bottom: 32px;">
+                  <div class="titled-text-block__text">
+                    <div class="client-card">
+                      <div class="client-card__img">
+                        <img data-src="img/client-1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="Клиент" width="387" height="160">
+                      </div>
+                      <div class="client-card__text">
+                        <a href="#" class="btn  btn--xl" aria-label="Завантажити Рекомендаційний лист" download>
+                          <span class="btn__text">Рекомендаційний лист</span>
+                          <span class="btn__icon">
+                            <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#file-arrow-down-icon"></use></svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="titled-text-block__body">
+                  <div class="titled-text-block__text">
+                    <h1>Imperial Tobacco</h1>
+                    <p>Компания ООО «КОРСА» более 10 лет является одним из ведущих игроков на рынке логистических услуг, выступая в качестве 3PL оператора. Большой опыт в логистике компании основывается на взаимовыгодном партнерстве и гарантирует бесперебойное обслуживание клиентов.  С 2017 года ООО «КОРСА» и ее торговая марка PAKLINE Logistics входит в группу компаний PAKLINE.</p>
+
+                    <div class="block" style="margin-top: 24px;">
+                      <!-- <div class="block__row">
+                        <div>
+                          <h4 style="margin-top:0;">@@title</h4>
+                        </div>
+                      </div> -->
+
+                      <ul>
+                        <li>
+                          Подготовку индивидуального решения в соответствии с вашими потребностями;
+                        </li>
+                        <li>
+                          Ответственное хранение вашего товара в безопасных складских помещениях;
+                        </li>
+                        <li>
+                          Современное ПО для выполнения складских и транспортных операций;</span>
+                        </li>
+                        <li>
+                          Комплектацию заказов на автоматизированных сборочных линиях;</span>
+                        </li>
+                        <li>
+                          Предоставление специализированных отчетов по складским запасам и собранным заказам в режиме 24/7;</span>
+                        </li>
+                        <li>
+                          Комплектацию собранных заказов в паллеты и сортировку по направлениям доставки;</span>
+                        </li>
+                        <li>
+                          Ответственное хранение вашего товара в безопасных складских помещениях;</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mmenu/mmenu.html')
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
