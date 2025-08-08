@@ -1,4 +1,9 @@
 .index-contacts {
+  margin-bottom: 92px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 128px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 

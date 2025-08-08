@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  @@include('_include/page_head.html', {
+      "title": "Часто задаваемые вопросы",
+      "pageType": "text"
+  })
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div id="page" class="page__inner">
+
+    <div class="page__content">
+      <div class="page__header-wrapper  page__header-wrapper--no-index"><!-- добавить модификатор для неглавной --no-index -->
+        <!-- @@include('blocks/hero/hero.html') -->
+        @@include('blocks/main-nav/main-nav.html')
+        @@include('blocks/page-header/page-header.html', {
+            "pageType": ""
+        })
+        <!-- TODO: убрать "pageType": "index" не для главной -->
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="breadcrumbs__wrapper">
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+          </div>
+        </div>
+      </div>
+
+      <main role="main">
+
+        <article class="container">
+          <div class="row">
+            <div class="page__text-header-col">
+              <div class="text-page-header">
+                <h1 class="text-page-header__title">Часто задаваемые вопросы</h1>
+                <!-- <p>С целью обеспечения защиты и безопасности личной информации пользователей сайта и клиентов, настоятельно рекомендуем Вам ознакомиться с данным уведомлением о нашей Политике конфиденциальности.</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="page__text-nav-col">
+              <aside class="aside-nav" role="navigation" aria-label="Навигация по разделам страницы">
+                <h4 style="margin-top: 0;">Разделы:</h4>
+                <ol class="aside-nav__list">
+                  <li class="aside-nav__item">
+                    <a class="aside-nav__link" href="#link-1" data-scroll-link>
+                      <span>Политика конфиденциальности</span>
+                    </a>
+                  </li>
+                  <li class="aside-nav__item">
+                    <a class="aside-nav__link" href="#link-2" data-scroll-link>
+                      <span>Файлы cookie</span>
+                    </a>
+                  </li>
+                  <li class="aside-nav__item">
+                    <a class="aside-nav__link" href="#link-3" data-scroll-link>
+                      <span>Почему мы используем файлы cookie?</span>
+                    </a>
+                  </li>
+                </ol>
+              </aside>
+            </div>
+
+            <div class="page__text-content-col">
+              <div id="link-1" class="text-page-content">
+                <h3 style="margin-top: 0">Заголовок раздела 1</h3>
+                <div class="faq">
+                  <a class="h4  faq__title" href="#collapseExample" aria-controls="collapseExample" aria-expanded="false" data-toggle="collapse" >Сколько времени займет выполнение моих заказов?</a>
+                  <div class="collapse  faq__content" id="collapseExample">
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                  </div>
+                </div>
+                <div class="faq">
+                  <a class="h4  faq__title" href="#collapseExample2" aria-controls="collapseExample2" aria-expanded="false" data-toggle="collapse" >Сколько времени займет выполнение моих заказов?</a>
+                  <div class="collapse  faq__content" id="collapseExample2">
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                  </div>
+                </div>
+                <div class="faq">
+                  <a class="h4  faq__title" href="#collapseExample3" aria-controls="collapseExample3" aria-expanded="false" data-toggle="collapse" >Сколько времени займет выполнение моих заказов?</a>
+                  <div class="collapse  faq__content" id="collapseExample3">
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="link-2" class="text-page-content">
+                <h3 style="margin-top: 0">Заголовок раздела 2</h3>
+                <div class="faq">
+                  <a class="h4  faq__title" href="#collapseExample2-1" aria-controls="collapseExample2-1" aria-expanded="false" data-toggle="collapse" >Сколько времени займет выполнение моих заказов?</a>
+                  <div class="collapse  faq__content" id="collapseExample2-1">
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                  </div>
+                </div>
+                <div class="faq">
+                  <a class="h4  faq__title" href="#collapseExample2-2" aria-controls="collapseExample2-2" aria-expanded="false" data-toggle="collapse" >Сколько времени займет выполнение моих заказов?</a>
+                  <div class="collapse  faq__content" id="collapseExample2-2">
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                  </div>
+                </div>
+                <div class="faq">
+                  <a class="h4  faq__title" href="#collapseExample3-2" aria-controls="collapseExample3-2" aria-expanded="false" data-toggle="collapse" >Сколько времени займет выполнение моих заказов?</a>
+                  <div class="collapse  faq__content" id="collapseExample3-2">
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                    <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="link-3" class="text-page-content">
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mmenu/mmenu.html')
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

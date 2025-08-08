@@ -1,0 +1,23 @@
+.faq {
+
+  $block-name:                &; // #{$block-name}__element
+
+  & + & {
+    margin-top: 32px;
+  }
+
+  &__title {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &__content {
+    padding: 16px 0 8px;
+  }
+}
